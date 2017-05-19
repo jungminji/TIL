@@ -6,6 +6,24 @@
     content: ""
     clear: both
 
+// screen readers only
+%sr-only
+  position: absolute
+  overflow: hidden
+  width: 1px
+  height: 1px
+  clip: rect(0, 0, 0, 0)
+  border: 0
+  padding: 0
+  margin: -1px
+
+/*%ir
+  position: absolute
+  top: 0
+  left: 0
+  background-repeat: no-repeat
+  background-size: 100% 100%*/
+
 // Media queries
 =media($view)
   @if $view == "m"
@@ -20,3 +38,15 @@
   @else
     @media screen and (min-width: $view)
       @content
+
+=section-heading($color, $bg-url, $bg-pos)
+  color: $color
+  background-image: $bg-url
+  background-position: $bg-pos
+  font-weight: bold
+  height: 60px
+  line-height: 60px
+  padding-left: 65px
+  margin: 1em 0
+  background-repeat: no-repeat
+  font-size: 2rem
