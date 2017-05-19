@@ -7,14 +7,16 @@
     clear: both
 
 // Media queries
-=mobile
-  @media screen and (min-width: 320px) and (max-width: 767px)
-    @content
-
-=tablet
-  @media screen and (min-width: 768px) and (max-width: 1199px)
-    @content
-
-=desktop
-  @media screen and (min-width: 1200px)
-    @content
+=media($view)
+  @if $view == "m"
+    @media screen and (min-width: 320px) and (max-width: 767px)
+      @content
+  @else if $view == "t"
+    @media screen and (min-width: 768px) and (max-width: 1199px)
+      @content
+  @else if $view == "d"
+    @media screen and (min-width: 1200px)
+      @content
+  @else
+    @media screen and (min-width: $view)
+      @content

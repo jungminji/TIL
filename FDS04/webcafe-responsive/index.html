@@ -10,13 +10,25 @@
 </head>
 
 <body>
-  <div class="container">
-    <div class="row">
-      <div class="col col-m-1 col-t-2 col-t-offset-1 col-d-2">Logo</div>
+
+  <div class="container header">
+    <div class="row" role="banner">
+      <div class="col col-m-1 col-t-2 col-t-offset-1 col-d-2">
+        <div class="logo" aria-labelledby="webcafe-heading">
+          <!-- Connect h1#webcafe-heading using aria-labelledby -->
+          <h1 id="webcafe-heading" class="a11y-hidden">웹카페</h1>
+          <picture>
+            <source srcset="assets/img/logo_m.svg" media="(max-width: 767px)">
+            <source srcset="assets/img/logo_l.svg" media="(min-width: 768px)">
+            <img src="assets/img/logo.png" alt="webcafe_logo" class="responsive-img">
+          </picture>
+        </div>
+      </div>
       <div class="col col-m-2 col-m-offset-1 col-t-4 col-t-offset-1 col-d-4 col-d-push-6">Guide</div>
       <div class="col col-m-4 col-d-4 col-d-pull-2">Search</div>
     </div>
   </div>
+
   <div class="container">
     <div class="row">
       <ul>
@@ -41,9 +53,19 @@
       </ul>
     </div>
   </div>
-  <div class="container">
-    <div class="row">
-      <div class="col">이미지</div>
+
+  <div class="container main-content">
+    <div class="row" role="main">
+      <div class="col">
+        <div class="rwd-intro" aria-label="반응형 이미지">
+          <picture>
+            <source srcset="assets/img/rwd_mobile.png" media="(max-width: 767px)">
+            <source srcset="assets/img/rwd_tablet.png" media="(min-width: 768px) and (max-width: 899px)">
+            <source srcset="assets/img/rwd_desktop.png" media="(min-width: 900px)">
+            <img src="assets/img/rwd_desktop.png" alt="Responsive Image" class="responsive-img">
+          </picture>
+        </div>
+      </div>
       <div class="col col-d-4">
         <div class="col col-t-2 alpha">커버</div>
         <div class="col col-t-6 alpha omega">내용</div>
@@ -54,6 +76,7 @@
       <div class="col col-t-4">트위터</div>
     </div>
   </div>
+
   <div class="container">
     <div class="row">
       <div class="col col-d-6 col-d-push-3">주소</div>

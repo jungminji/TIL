@@ -1,19 +1,6 @@
 $containerWidth: 100%
 $rowWidth: 1200px
 
-// body
-//   padding-left: 0
-//   padding-right: 0
-//   +mobile
-//     padding-left: 10px
-//     padding-right: 10px
-//   +tablet
-//     padding-left: 15px
-//     padding-right: 15px
-//   +desktop
-//     padding-left: 20px
-//     padding-right: 20px
-
 body
   background: #eee
 
@@ -27,6 +14,7 @@ body
   background: rgba(255, 255, 0, 0.3)
   +clearfix
 
+// Column default layout
 .col
   position: relative
   box-sizing: border-box
@@ -34,22 +22,24 @@ body
   width: 100%
   min-height: 50px
   box-shadow: 0 0 1px 1px #f00 inset
-  +mobile
+  +media(m)
     padding-left: 10px
     padding-right: 10px
-  +tablet
+  +media(t)
     padding-left: 15px
     padding-right: 15px
-  +desktop
+  +media(d)
     padding-left: 20px
     padding-right: 20px
 
+// Column alpha & omega
 .alpha
   padding-left: 0
 .omega
   padding-right: 0
 
-+mobile
+// Columns for different viewport
++media(m)
   @for $i from 1 through 4
     .col-m-#{$i}
       width: 100% / 4 * $i
@@ -60,7 +50,7 @@ body
     .col-m-pull-#{$i}
       right: 100% / 4 * $i
 
-+tablet
++media(t)
   @for $i from 1 through 8
     .col-t-#{$i}
       width: 100% / 8 * $i
@@ -71,7 +61,7 @@ body
     .col-t-pull-#{$i}
       right: 100% / 8 * $i
 
-+desktop
++media(d)
   @for $i from 1 through 12
     .col-d-#{$i}
       width: 100% / 12 * $i
@@ -81,16 +71,3 @@ body
       left: 100% / 12 * $i
     .col-d-pull-#{$i}
       right: 100% / 12 * $i
-
-
-// $list: mobile tablet desktop
-//
-// @each $device in $list
-//   .col-#{$device}
-//     border: 0 none
-//
-// $map: ("h1": 20px, "h2": 18px, "h3": 16px)
-//
-// @each $heading, $size in $map
-//   #{$heading}
-//     font-size: $size
