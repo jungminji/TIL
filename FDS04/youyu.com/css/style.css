@@ -1,0 +1,115 @@
+/*! reset.sass */
+html {
+  box-sizing: border-box;
+  font-size: 10px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* ! grid.sass */
+/* Toggle grid module */
+.show-grid {
+  position: relative;
+}
+.show-grid::before, .show-grid::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 10;
+}
+.show-grid::before {
+  background: repeating-linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 0px, rgba(255, 255, 255, 0.1) 20px, #aaa 20px, #aaa 21px);
+}
+.show-grid::after {
+  left: 50%;
+  width: 1080px;
+  transform: translateX(-50%);
+  background: repeating-linear-gradient(to right, rgba(125, 38, 38, 0.25) 0px, rgba(125, 38, 38, 0.25) 70px, transparent 70px, transparent 90px);
+}
+
+/* Container module */
+.container {
+  width: 1080px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Row module */
+.row::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* Column module */
+.col {
+  float: left;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.is-1 {
+  width: 70px;
+}
+
+.is-2 {
+  width: 160px;
+}
+
+.is-3 {
+  width: 250px;
+}
+
+.is-4 {
+  width: 340px;
+}
+
+.is-5 {
+  width: 430px;
+}
+
+.is-6 {
+  width: 520px;
+}
+
+.is-7 {
+  width: 610px;
+}
+
+.is-8 {
+  width: 700px;
+}
+
+.is-9 {
+  width: 790px;
+}
+
+.is-10 {
+  width: 880px;
+}
+
+.is-11 {
+  width: 970px;
+}
+
+.is-12 {
+  width: 1060px;
+}
+
+/* Offset module */
+/* Utility module */
+
+/*# sourceMappingURL=style.css.map */

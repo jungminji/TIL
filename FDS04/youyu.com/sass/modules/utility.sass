@@ -1,0 +1,36 @@
+$base-font-size: 14px
+$base-line-height: 1.5
+
+$row-height: 20px
+
+$columns: 12
+$column-width: 70px
+
+$gutter-position: split
+$gutter-width: 10px
+
+$container-width: 1080px
+
+=clearfix
+  &::after
+    content: ''
+    display: block
+    clear: both
+
+=show-grid
+  position: relative
+  &::before, &::after
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100vh
+    z-index: 10
+  &::before
+    background: repeating-linear-gradient(to bottom, rgba(255,255,255,0.1) 0px, rgba(255,255,255,0.1) $row-height, #aaa $row-height, #aaa $row-height + 1)
+  &::after
+    left: 50%
+    width: $container-width
+    transform: translateX(-50%)
+    background: repeating-linear-gradient(to right, rgba(125,38,38,0.25) 0px, rgba(125,38,38,0.25) $column-width, transparent $column-width, transparent $column-width + $gutter-width * 2)
