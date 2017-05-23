@@ -2,11 +2,11 @@
 
 /* Toggle grid module */
 .show-grid
-  +show-grid
+  +gridGuide
 
 /* Container module
 .container
-  width: $container-width
+  width: $containerWidth
   margin-left: auto
   margin-right: auto
 
@@ -17,13 +17,13 @@
 /* Column module
 .col
   float: left
-  margin-left: $gutter-width / 2
-  margin-right: $gutter-width / 2
+  margin-left: $gutterWidth / 2
+  margin-right: $gutterWidth / 2
 
 @for $i from 1 through $columns
   .is-#{$i}
-    width: ( ($column-width * $i) + ($gutter-width * 2) * ($i - 1) )
-    
+    width: ( ($columnWidth * $i) + ($gutterWidth * 2) * ($i - 1) )
+
 /* Offset module
 
 /* Utility module

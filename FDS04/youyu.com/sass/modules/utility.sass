@@ -1,23 +1,29 @@
-$base-font-size: 14px
-$base-line-height: 1.5
+/*! Variables, mixins, functions */
 
-$row-height: 20px
+// Variable: Base
+$baseFontSize: 14px
+$baseLineHeight: 1.5
 
+// Variable: Grid layout
+$rowHeight: 20px
 $columns: 12
-$column-width: 70px
+$columnWidth: 70px
+$gutterStyle: split
+$gutterWidth: 10px
 
-$gutter-position: split
-$gutter-width: 10px
+// Variable: etc.
+$containerWidth: 1080px
 
-$container-width: 1080px
 
+// Mixin: Clearfix
 =clearfix
   &::after
     content: ''
     display: block
     clear: both
 
-=show-grid
+// Mixin: grid layout styles
+=gridGuide
   position: relative
   &::before, &::after
     content: ''
@@ -28,9 +34,9 @@ $container-width: 1080px
     height: 100vh
     z-index: 10
   &::before
-    background: repeating-linear-gradient(to bottom, rgba(255,255,255,0.1) 0px, rgba(255,255,255,0.1) $row-height, #aaa $row-height, #aaa $row-height + 1)
+    background: repeating-linear-gradient(to bottom, rgba(255,255,255,0.1) 0px, rgba(255,255,255,0.1) $rowHeight, #aaa $rowHeight, #aaa $rowHeight + 1)
   &::after
     left: 50%
-    width: $container-width
+    width: $containerWidth
     transform: translateX(-50%)
-    background: repeating-linear-gradient(to right, rgba(125,38,38,0.25) 0px, rgba(125,38,38,0.25) $column-width, transparent $column-width, transparent $column-width + $gutter-width * 2)
+    background: repeating-linear-gradient(to right, rgba(125,38,38,0.25) 0px, rgba(125,38,38,0.25) $columnWidth, transparent $columnWidth, transparent $columnWidth + $gutterWidth * 2)

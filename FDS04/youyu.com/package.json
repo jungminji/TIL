@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "sass": "sass --sourcemap sass/main.sass:css/style.css --style expanded",
+    "watch": "npm run sass -- -w"
+  },
+  "devDependencies": {
+    "sass": "^0.5.0"
+  }
+}
