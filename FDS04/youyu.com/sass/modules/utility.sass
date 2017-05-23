@@ -40,3 +40,20 @@ $containerWidth: 1080px
     width: $containerWidth
     transform: translateX(-50%)
     background: repeating-linear-gradient(to right, rgba(125,38,38,0.25) 0px, rgba(125,38,38,0.25) $columnWidth, transparent $columnWidth, transparent $columnWidth + $gutterWidth * 2)
+
+
+=text($rowHeight, $columns, $columnWidth, $gutterStyle, $gutterWidth)
+  &::before, &::after
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100vh
+    content: ""
+    z-index: 10
+  &::before
+    background: repeating-linear-gradient(to bottom, rgba(255,255,255,0.1) 0px, rgba(255,255,255,0.1) $rowHeight, #aaa $rowHeight, #aaa $rowHeight + 1)
+  &::after
+    width: $containerWidth
+    left: 50%
+    transform: translateX(-50%)
