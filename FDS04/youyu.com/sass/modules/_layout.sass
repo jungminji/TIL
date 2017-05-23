@@ -1,20 +1,14 @@
-/* ! grid.sass
-
-/* Toggle grid module */
 .show-grid
-  +gridGuide
+  +gridGuide($leading, $columnWidth, $gutterWidth, $containerWidth)
 
-/* Container module
 .container
   width: $containerWidth
   margin-left: auto
   margin-right: auto
 
-/* Row module
 .row
   +clearfix
 
-/* Column module
 .col
   float: left
   margin-left: $gutterWidth / 2
@@ -22,8 +16,4 @@
 
 @for $i from 1 through $columns
   .is-#{$i}
-    width: ( ($columnWidth * $i) + ($gutterWidth * 2) * ($i - 1) )
-
-/* Offset module
-
-/* Utility module
+    width: calWidth($i)

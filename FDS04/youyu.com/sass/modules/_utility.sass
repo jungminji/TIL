@@ -1,0 +1,41 @@
+$baseFontSize: 14px !default
+$baseLineHeight: 1.5
+$leading: $baseFontSize * $baseLineHeight
+
+$rowHeight: 20px
+$columns: 12
+$columnWidth: 70px
+$gutterStyle: split
+$gutterWidth: 20px
+
+$containerWidth: ($columnWidth + $gutterWidth) * $columns
+
+=clearfix
+  &::after
+    content: ""
+    display: block
+    clear: both
+
+// Grid guideline style
+=gridGuide($leading, $columnWidth, $gutterWidth, $containerWidth)
+  $color: rgba(#f00, 0.15)
+  position: relative
+  &::before, &::after
+    content: ""
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100vh
+    z-index: 10
+  &::before
+    background: repeating-linear-gradient(to bottom, transparent 0px, transparent ($leading - 1), #333 ($leading - 1), #333 $leading)
+  &::after
+    width: $containerWidth
+    left: 50%
+    transform: translateX(-50%)
+    background: repeating-linear-gradient(to right, $color 0px, $color $columnWidth, transparent $columnWidth, transparent ($columnWidth + $gutterWidth) )
+
+// Column width calculator
+@function calWidth($num)
+  @return $columnWidth * $num + $gutterWidth * ($num - 1)
