@@ -1,23 +1,45 @@
-.show-grid
-  +gridGuide($leading, $columnWidth, $gutterWidth, $containerWidth)
+.grid-guide
+  position: relative
+  &::before, &::after
+    content: ''
+    position: absolute
+    top: 0
+    height: $grid-height
+    z-index: 10
+  &::before
+    left: 0
+    width: 100%
+    background: linear-gradient(180deg, transparent $leading - 1, #0cf $leading - 1)
+    background-size: 1px $leading
+  &::after
+    left: 50%
+    transform: translateX(-50%)
+    width: $container-width
+    background: linear-gradient(90deg, transparent $gutter-half-width, $column-color $gutter-half-width, $column-color $column-width + $gutter-half-width, transparent $column-width + $gutter-half-width)
+    background-size: $column-width + $gutter-width 1px
 
 .container
-  width: $containerWidth
+  width: $container-width
   margin-left: auto
   margin-right: auto
 
 .row
-  +isNested
-  +clearfix
+  &::after
+    content: ''
+    display: block
+    clear: both
+  &.is-nested
+    & > :first-child
+      margin-left: 0
+    & > :last-child
+      margin-right: 0
 
 .col
   float: left
-  margin-left: $gutterWidth / 2
-  margin-right: $gutterWidth / 2
-
-// Column, offsets 1 to 12
-@for $i from 1 through $columns
+  margin-left: $gutter-half-width
+  margin-right: $gutter-half-width
+@for $i from 1 through $grid-column-number
   .is-#{$i}
-    width: columnWidth($i)
+    width: col-width-calc($i)
   .offset-#{$i}
-    margin-left: offsetWidth($i)
+    margin-left: col-offset-calc($i)

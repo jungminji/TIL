@@ -1,57 +1,30 @@
-$baseFontSize: 14px !default
-$baseLineHeight: 1.5
-$leading: $baseFontSize * $baseLineHeight
+/*
+  Typography
+  $base-font-size: !default
+    -> If the variable already has an assignment, it will not be re-assigned
+  $leading-scale: is line-height
+  $leadinf: the actual height of row */
 
-$rowHeight: 20px
-$columns: 12
-$columnWidth: 70px
-$gutterStyle: split
-$gutterWidth: 20px
+$base-font-size: 14px !default
+$leading-scale: 1.5
+$leading: $base-font-size * $leading-scale
 
-$containerWidth: ($columnWidth + $gutterWidth) * $columns
+// Grid guideline
+$grid-height: 100vh
+$grid-column-number: 12
+// Grid column properties
+$column-width: 70px
+$column-color: rgba(#fb8989, 0.35)
+$gutter-style: 'split'
+$gutter-width: 20px
+$gutter-half-width: $gutter-width / 2
 
+// page-container width
+$container-width: ($column-width + $gutter-width) * $grid-column-number
 
-// Grid guideline style
-=gridGuide($leading, $columnWidth, $gutterWidth, $containerWidth, $color: hsla(0, 76%, 67%, 0.3))
-  position: relative
-  &::before, &::after
-    content: ""
-    position: absolute
-    top: 0
-    left: 0
-    width: 100%
-    height: 100vh
-    z-index: 10
-  &::before
-    background: repeating-linear-gradient(to bottom, transparent 0px, transparent ($leading - 1), aqua ($leading - 1), #0cf $leading)
-  &::after
-    width: $containerWidth
-    left: 50%
-    transform: translateX(-50%)
-    background: repeating-linear-gradient(to right, $color 10px, $color $columnWidth + 10px, transparent $columnWidth + 10px, transparent ($columnWidth + $gutterWidth) + 10px )
+// Functions
+@function col-width-calc($n)
+  @return ($column-width * $n) + $gutter-width * ($n - 1)
 
-
-
-// Clearfix
-=clearfix
-  &::after
-    content: ""
-    display: block
-    clear: both
-
-
-// Nested Column no margin
-=isNested
-  &.is-nested
-    & > :first-child
-      margin-left: 0
-    & > :last-child
-      margin-right: 0
-
-// Column width calculator
-@function columnWidth($n)
-  @return $columnWidth * $n + $gutterWidth * ($n - 1)
-
-@function offsetWidth($n)
-  @return columnWidth($n) + ($gutterWidth + $gutterWidth/2)
-  /*@return ($columnWidth + $gutterWidth) * $n*/
+@function col-offset-calc($n)
+  @return col-width-calc($n) + $gutter-width + $gutter-half-width
