@@ -7,6 +7,7 @@
   margin-right: auto
 
 .row
+  +isNested
   +clearfix
 
 .col
@@ -14,6 +15,9 @@
   margin-left: $gutterWidth / 2
   margin-right: $gutterWidth / 2
 
+// Column, offsets 1 to 12
 @for $i from 1 through $columns
   .is-#{$i}
-    width: calWidth($i)
+    width: columnWidth($i)
+  .offset-#{$i}
+    margin-left: offsetWidth($i)

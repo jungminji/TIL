@@ -10,15 +10,9 @@ $gutterWidth: 20px
 
 $containerWidth: ($columnWidth + $gutterWidth) * $columns
 
-=clearfix
-  &::after
-    content: ""
-    display: block
-    clear: both
 
 // Grid guideline style
-=gridGuide($leading, $columnWidth, $gutterWidth, $containerWidth)
-  $color: rgba(#f00, 0.15)
+=gridGuide($leading, $columnWidth, $gutterWidth, $containerWidth, $color: hsla(0, 76%, 67%, 0.3))
   position: relative
   &::before, &::after
     content: ""
@@ -29,13 +23,35 @@ $containerWidth: ($columnWidth + $gutterWidth) * $columns
     height: 100vh
     z-index: 10
   &::before
-    background: repeating-linear-gradient(to bottom, transparent 0px, transparent ($leading - 1), #333 ($leading - 1), #333 $leading)
+    background: repeating-linear-gradient(to bottom, transparent 0px, transparent ($leading - 1), aqua ($leading - 1), #0cf $leading)
   &::after
     width: $containerWidth
     left: 50%
     transform: translateX(-50%)
-    background: repeating-linear-gradient(to right, $color 0px, $color $columnWidth, transparent $columnWidth, transparent ($columnWidth + $gutterWidth) )
+    background: repeating-linear-gradient(to right, $color 10px, $color $columnWidth + 10px, transparent $columnWidth + 10px, transparent ($columnWidth + $gutterWidth) + 10px )
+
+
+
+// Clearfix
+=clearfix
+  &::after
+    content: ""
+    display: block
+    clear: both
+
+
+// Nested Column no margin
+=isNested
+  &.is-nested
+    & > :first-child
+      margin-left: 0
+    & > :last-child
+      margin-right: 0
 
 // Column width calculator
-@function calWidth($num)
-  @return $columnWidth * $num + $gutterWidth * ($num - 1)
+@function columnWidth($n)
+  @return $columnWidth * $n + $gutterWidth * ($n - 1)
+
+@function offsetWidth($n)
+  @return columnWidth($n) + ($gutterWidth + $gutterWidth/2)
+  /*@return ($columnWidth + $gutterWidth) * $n*/
