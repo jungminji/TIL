@@ -1,54 +1,57 @@
-.brand > .col
-  height: $leading * 3
-  img
-    height: 100%
-  .search-form
-    margin-top: $leading / 2
-    margin-left: $column-width
-    fieldset
-      position: relative
-    legend, label
-      display: block
-      width: 0
-      height: 0
-      padding-left: 20px
-      overflow: hidden
-    #search-text
-      position: absolute
-      border: 2px solid #555656
-      height: $leading * 2
-      width: $column-width * 4 + $gutter-width * 5
-      color: #9c9c9c
-      font-size: 1.4rem
-      padding-left: 10px
-    .btn-search
-      position: absolute
-      top: 10px
-      left: 340px
-      width: 32px
-      height: 23px
-      border: 0 none
-      background: url('../assets/icons/icons.png')
-      background-size: cover
-      background-position: 5px -226px
-      background-repeat: no-repeat
-      cursor: pointer
+.header
+  padding-top: $leading * 2
+  height: $leading * 9
 
-.top-menu
+.brand
+  height: $leading * 3
+  & > img
+    width: auto
+    height: 100%
+
+.search-form
+  margin-top: $leading / 2
+  padding-left: $column-width + $gutter-width/2
+  fieldset
+    position: relative
+  legend, label
+    display: block
+    width: 0
+    height: 0
+    padding-left: 20px
+    overflow: hidden
+  .search-bar
+    border: 2px solid #555656
+    height: $leading * 2
+    width: $column-width * 4 + $gutter-width * 4
+    color: #9c9c9c
+    font-size: 1.4rem
+    padding-left: 10px
+  .search-btn
+    position: absolute
+    top: $leading / 2
+    right: $column-width + 10px
+    width: 29px
+    height: $leading
+    border: none
+    background: url('../assets/icons/icons.png')
+    background-size: cover
+    background-position: 5px -205px
+    background-repeat: no-repeat
+    cursor: pointer
+
+.my-menu
   text-align: right
-  & > .col
-    padding-right: 3px
   & a
     display: inline-block
     width: 100%
     margin-top: $leading
     color: #971a1d
     font-weight: bold
-    border: 1px solid transparent
-    line-height: $leading
+    border: 2px solid transparent
+    line-height: $leading - 3
     text-align: center
     &:hover
-      border: 1px solid #971a1d
+      border: 2px solid #971a1d
 
 .navigation
   margin-top: $leading * 2

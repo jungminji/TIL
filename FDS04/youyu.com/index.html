@@ -10,24 +10,31 @@
 </head>
 
 <body class="grid-guide">
-  <div class="container">
 
-    <div class="row brand">
-      <div class="col is-3">
+  <!-- Header -->
+  <header class="container header">
+    <!-- Row -->
+    <div class="row">
+      <!-- Brand(Logo) End -->
+      <div class="col is-3 brand">
         <img src="assets/header/logo.svg" alt="">
       </div>
-      <div class="col is-6">
-        <form action="" class="search-form">
+      <!-- Brand(Logo) End -->
+      <!-- Search Bar -->
+      <div class="col is-5 search-form">
+        <form action="#" class="">
           <fieldset>
-            <legend>Search</legend>
-            <label for="search-text">검색</label>
-            <input type="text" id="search-text" placeholder="검색어를 입력하세요">
-            <button type="button" class="btn-search"></button>
+            <legend>검색 폼</legend>
+            <label for="search">검색</label>
+            <input type="text" id="search" class="search-bar" placeholder="검색어를 입력하세요">
+            <button type="button" class="search-btn"></button>
           </fieldset>
         </form>
       </div>
-      <div class="col is-2 offset-1">
-        <div class="row is-nested top-menu">
+      <!-- Search Bar End -->
+      <!-- My Menu -->
+      <div class="col is-2 offset-2">
+        <div class="row is-nested my-menu">
           <div class="col is-1">
             <a href="#" class="signup">회원가입</a>
           </div>
@@ -36,8 +43,11 @@
           </div>
         </div>
       </div>
+      <!-- My Menu End -->
     </div>
+    <!-- Row End -->
 
+    <!-- Navigation -->
     <ul class="row navigation">
       <li class="col is-1"><a href="#" class="nav-item">main</a></li>
       <li class="col is-1"><a href="#" class="nav-item">brand</a></li>
@@ -52,14 +62,17 @@
       <li class="col is-1"><a href="#" class="nav-item">summer</a></li>
       <li class="col is-1"><a href="#" class="nav-item">etc</a></li>
     </ul>
-
+    <!-- Navigation End -->
+    <!-- Filter -->
     <div class="row filter">
       <div class="col is-12">
         <span class="icon-filter"></span>필터를 설정하세요
       </div>
     </div>
+    <!-- Filter End -->
   </div>
-
+  <!-- Header End -->
+  <!-- Main Contents -->
   <div class="container">
     <div class="row">
       <div class="col is-12" style="background: blue">
@@ -67,6 +80,8 @@
       </div>
     </div>
   </div>
+  <!-- Main Contents End -->
+
   <script src="js/toggleGrid.js"></script>
 </body>
 

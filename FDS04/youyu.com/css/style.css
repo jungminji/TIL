@@ -1,3 +1,50 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+ * v2.0 | 20110126
+ * License: none (public domain) */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* Custom Reset */
 html {
   box-sizing: border-box;
   font-size: 10px;
@@ -13,14 +60,6 @@ body {
 *::after {
   box-sizing: inherit; }
 
-form, fieldset, legend, label {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline; }
-
 a {
   color: #000;
   text-decoration: none; }
@@ -30,9 +69,6 @@ a {
  *   -> If the variable already has an assignment, it will not be re-assigned
  * $leading-scale: is line-height
  * $leadinf: the actual height of row */
-body {
-  padding-top: 42px; }
-
 .grid-guide {
   position: relative; }
   .grid-guide::before, .grid-guide::after {
@@ -201,57 +237,60 @@ body {
 .isolate > .push-11 {
   margin-left: 1090px; }
 
-.brand > .col {
-  height: 63px; }
-  .brand > .col img {
-    height: 100%; }
-  .brand > .col .search-form {
-    margin-top: 10.5px;
-    margin-left: 70px; }
-    .brand > .col .search-form fieldset {
-      position: relative; }
-    .brand > .col .search-form legend, .brand > .col .search-form label {
-      display: block;
-      width: 0;
-      height: 0;
-      padding-left: 20px;
-      overflow: hidden; }
-    .brand > .col .search-form #search-text {
-      position: absolute;
-      border: 2px solid #555656;
-      height: 42px;
-      width: 380px;
-      color: #9c9c9c;
-      font-size: 1.4rem;
-      padding-left: 10px; }
-    .brand > .col .search-form .btn-search {
-      position: absolute;
-      top: 10px;
-      left: 340px;
-      width: 32px;
-      height: 23px;
-      border: 0 none;
-      background: url("../assets/icons/icons.png");
-      background-size: cover;
-      background-position: 5px -226px;
-      background-repeat: no-repeat;
-      cursor: pointer; }
+.header {
+  padding-top: 42px;
+  height: 189px; }
 
-.top-menu {
+.brand {
+  height: 63px; }
+  .brand > img {
+    width: auto;
+    height: 100%; }
+
+.search-form {
+  margin-top: 10.5px;
+  padding-left: 80px; }
+  .search-form fieldset {
+    position: relative; }
+  .search-form legend, .search-form label {
+    display: block;
+    width: 0;
+    height: 0;
+    padding-left: 20px;
+    overflow: hidden; }
+  .search-form .search-bar {
+    border: 2px solid #555656;
+    height: 42px;
+    width: 360px;
+    color: #9c9c9c;
+    font-size: 1.4rem;
+    padding-left: 10px; }
+  .search-form .search-btn {
+    position: absolute;
+    top: 10.5px;
+    right: 80px;
+    width: 29px;
+    height: 21px;
+    border: none;
+    background: url("../assets/icons/icons.png");
+    background-size: cover;
+    background-position: 5px -205px;
+    background-repeat: no-repeat;
+    cursor: pointer; }
+
+.my-menu {
   text-align: right; }
-  .top-menu > .col {
-    padding-right: 3px; }
-  .top-menu a {
+  .my-menu a {
     display: inline-block;
     width: 100%;
     margin-top: 21px;
     color: #971a1d;
     font-weight: bold;
-    border: 1px solid transparent;
-    line-height: 21px;
+    border: 2px solid transparent;
+    line-height: 18px;
     text-align: center; }
-    .top-menu a:hover {
-      border: 1px solid #971a1d; }
+    .my-menu a:hover {
+      border: 2px solid #971a1d; }
 
 .navigation {
   margin-top: 42px;
