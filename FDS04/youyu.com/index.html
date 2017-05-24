@@ -7,40 +7,63 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Shopping - youyu.com</title>
   <link rel="stylesheet" href="css/style.css">
-  <style>
-    .box {
-      height: 126px;
-      line-height: 126px;
-      background: #333;
-      color: #fff;
-      text-align: center;
-      margin-bottom: 21px;
-    }
-  </style>
 </head>
 
-<body class="show-grid">
+<body class="grid-guide">
   <div class="container">
-    <div class="row">
-      <div class="box col is-6">col-6</div>
+
+    <div class="row brand">
+      <div class="col is-3">
+        <img src="assets/header/logo.svg" alt="">
+      </div>
       <div class="col is-6">
-        <div class="row is-nested">
-          <div class="box col is-2 offset-1">col-2</div>
-          <div class="box col is-3">col-3</div>
+        <form action="" class="search-form">
+          <fieldset>
+            <legend>Search</legend>
+            <label for="search-text">검색</label>
+            <input type="text" id="search-text" placeholder="검색어를 입력하세요">
+            <button type="button" class="btn-search"></button>
+          </fieldset>
+        </form>
+      </div>
+      <div class="col is-2 offset-1">
+        <div class="row is-nested top-menu">
+          <div class="col is-1">
+            <a href="#" class="signup">회원가입</a>
+          </div>
+          <div class="col is-1">
+            <a href="#" class="signin">로그인</a>
+          </div>
         </div>
       </div>
     </div>
-    <div class="row">
-      <div class="box col is-4">col-4</div>
-      <div class="box col is-4">col-4</div>
-      <div class="box col is-4">col-4</div>
-    </div>
-    <div class="row">
+
+    <ul class="row navigation">
+      <li class="col is-1"><a href="#" class="nav-item">main</a></li>
+      <li class="col is-1"><a href="#" class="nav-item">brand</a></li>
+      <li class="col is-1"><a href="#" class="nav-item">special</a></li>
+      <li class="col is-1"><a href="#" class="nav-item">outer</a></li>
+      <li class="col is-1"><a href="#" class="nav-item">tops</a></li>
+      <li class="col is-1"><a href="#" class="nav-item">bottom</a></li>
+      <li class="col is-1"><a href="#" class="nav-item">dress</a></li>
+      <li class="col is-1"><a href="#" class="nav-item">shoes</a></li>
+      <li class="col is-1"><a href="#" class="nav-item">bag</a></li>
+      <li class="col is-1"><a href="#" class="nav-item">acc</a></li>
+      <li class="col is-1"><a href="#" class="nav-item">summer</a></li>
+      <li class="col is-1"><a href="#" class="nav-item">etc</a></li>
+    </ul>
+
+    <div class="row filter">
       <div class="col is-12">
-        <div class="row is-nested">
-          <div class="box col is-4 offset-3">col-4</div>
-          <div class="box col is-3 offset-1">col-3</div>
-        </div>
+        <span class="icon-filter"></span>필터를 설정하세요
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col is-12" style="background: blue">
+        main field
       </div>
     </div>
   </div>

@@ -28,3 +28,14 @@ $container-width: ($column-width + $gutter-width) * $grid-column-number
 
 @function col-offset-calc($n)
   @return col-width-calc($n) + $gutter-width + $gutter-half-width
+
+// Mixins
+=clearfix
+  &::before
+    content: ''
+    display: table
+    clear: both
+  &::after
+    content: ''
+    display: table
+    clear: both

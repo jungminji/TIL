@@ -1,3 +1,6 @@
+body
+  padding-top: $leading * 2
+
 .grid-guide
   position: relative
   &::before, &::after
@@ -39,10 +42,16 @@
   margin-left: $gutter-half-width
   margin-right: $gutter-half-width
 @for $i from 1 through $grid-column-number
+  $offset-width: col-offset-calc($i)
   .is-#{$i}
     width: col-width-calc($i)
   .offset-#{$i}
-    $offset-width: col-offset-calc($i)
     margin-left: $offset-width
     .is-nested &:first-child
       margin-left: $offset-width - $gutter-half-width
+
+  // This codes below needs to be fixed
+  @if $i > 1
+    $i: $i - 1
+    .isolate > .push-#{$i}
+      margin-left: $offset-width

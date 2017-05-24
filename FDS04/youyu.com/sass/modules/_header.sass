@@ -1,0 +1,99 @@
+.brand > .col
+  height: $leading * 3
+  img
+    height: 100%
+  .search-form
+    margin-top: $leading / 2
+    margin-left: $column-width
+    fieldset
+      position: relative
+    legend, label
+      display: block
+      width: 0
+      height: 0
+      padding-left: 20px
+      overflow: hidden
+    #search-text
+      position: absolute
+      border: 2px solid #555656
+      height: $leading * 2
+      width: $column-width * 4 + $gutter-width * 5
+      color: #9c9c9c
+      font-size: 1.4rem
+      padding-left: 10px
+    .btn-search
+      position: absolute
+      top: 10px
+      left: 340px
+      width: 32px
+      height: 23px
+      border: 0 none
+      background: url('../assets/icons/icons.png')
+      background-size: cover
+      background-position: 5px -226px
+      background-repeat: no-repeat
+      cursor: pointer
+
+.top-menu
+  text-align: right
+  & > .col
+    padding-right: 3px
+  & a
+    display: inline-block
+    width: 100%
+    margin-top: $leading
+    color: #971a1d
+    font-weight: bold
+    border: 1px solid transparent
+    line-height: $leading
+    text-align: center
+    &:hover
+      border: 1px solid #971a1d
+
+.navigation
+  margin-top: $leading * 2
+  list-style: none
+  padding-left: 0
+  .nav-item
+    display: block
+    text-align: center
+    text-transform: uppercase
+    font-weight: bold
+    border-bottom: 2px solid transparent
+    &:hover
+      color: #971a1d
+      border-bottom: 2px solid #bb2035
+    &:active
+      color: #fff
+      background: #bb2035
+      border-radius: 2px
+
+
+.filter
+  margin-top: $leading
+  border-top: 2px solid #bb2035
+  height: $leading * 2
+  position: relative
+  & > .col
+    background: #f0f0f0
+    text-align: center
+    color: #97191c
+    position: relative
+    padding-top: $leading / 2
+    font-weight: bold
+    height: $leading * 2
+    &:hover
+      position: absolute
+      top: 0
+      left: 0
+      height: $leading * 11
+      background-color: #f0f0f0
+  .icon-filter
+    display: inline-block
+    background: url('../assets/icons/icons.png')
+    background-size: cover
+    background-position: 5px -61px
+    background-repeat: no-repeat
+    width: 20px
+    height: $leading / 1.5
+    margin-right: 8px
