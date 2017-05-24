@@ -42,4 +42,7 @@
   .is-#{$i}
     width: col-width-calc($i)
   .offset-#{$i}
-    margin-left: col-offset-calc($i)
+    $offset-width: col-offset-calc($i)
+    margin-left: $offset-width
+    .is-nested &:first-child
+      margin-left: $offset-width - $gutter-half-width

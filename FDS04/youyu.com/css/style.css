@@ -76,6 +76,9 @@ body {
 .offset-1 {
   margin-left: 100px;
 }
+.is-nested .offset-1:first-child {
+  margin-left: 90px;
+}
 
 .is-2 {
   width: 160px;
@@ -83,6 +86,9 @@ body {
 
 .offset-2 {
   margin-left: 190px;
+}
+.is-nested .offset-2:first-child {
+  margin-left: 180px;
 }
 
 .is-3 {
@@ -92,6 +98,9 @@ body {
 .offset-3 {
   margin-left: 280px;
 }
+.is-nested .offset-3:first-child {
+  margin-left: 270px;
+}
 
 .is-4 {
   width: 340px;
@@ -99,6 +108,9 @@ body {
 
 .offset-4 {
   margin-left: 370px;
+}
+.is-nested .offset-4:first-child {
+  margin-left: 360px;
 }
 
 .is-5 {
@@ -108,6 +120,9 @@ body {
 .offset-5 {
   margin-left: 460px;
 }
+.is-nested .offset-5:first-child {
+  margin-left: 450px;
+}
 
 .is-6 {
   width: 520px;
@@ -115,6 +130,9 @@ body {
 
 .offset-6 {
   margin-left: 550px;
+}
+.is-nested .offset-6:first-child {
+  margin-left: 540px;
 }
 
 .is-7 {
@@ -124,6 +142,9 @@ body {
 .offset-7 {
   margin-left: 640px;
 }
+.is-nested .offset-7:first-child {
+  margin-left: 630px;
+}
 
 .is-8 {
   width: 700px;
@@ -131,6 +152,9 @@ body {
 
 .offset-8 {
   margin-left: 730px;
+}
+.is-nested .offset-8:first-child {
+  margin-left: 720px;
 }
 
 .is-9 {
@@ -140,6 +164,9 @@ body {
 .offset-9 {
   margin-left: 820px;
 }
+.is-nested .offset-9:first-child {
+  margin-left: 810px;
+}
 
 .is-10 {
   width: 880px;
@@ -147,6 +174,9 @@ body {
 
 .offset-10 {
   margin-left: 910px;
+}
+.is-nested .offset-10:first-child {
+  margin-left: 900px;
 }
 
 .is-11 {
@@ -156,6 +186,9 @@ body {
 .offset-11 {
   margin-left: 1000px;
 }
+.is-nested .offset-11:first-child {
+  margin-left: 990px;
+}
 
 .is-12 {
   width: 1060px;
@@ -163,6 +196,9 @@ body {
 
 .offset-12 {
   margin-left: 1090px;
+}
+.is-nested .offset-12:first-child {
+  margin-left: 1080px;
 }
 
 /*# sourceMappingURL=style.css.map */
