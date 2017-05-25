@@ -2,7 +2,7 @@
   padding-top: $leading * 2
   height: $leading * 9
 
-.brand
+.logo
   height: $leading * 3
   & > img
     width: auto
@@ -29,7 +29,7 @@
   .search-btn
     position: absolute
     top: $leading / 2
-    right: $column-width + 10px
+    right: 3%
     width: 29px
     height: $leading
     border: none
@@ -40,44 +40,82 @@
     cursor: pointer
 
 .my-menu
-  text-align: right
-  & a
+  /*display: none*/
+  .signup, .signin
     display: inline-block
     width: 100%
     margin-top: $leading
     color: #971a1d
     font-weight: bold
-    border: 2px solid transparent
+    border: 1px solid transparent
     line-height: $leading - 3
     text-align: center
+    padding: 2px 8px
     &:hover
-      border: 2px solid #971a1d
+      border: 1px solid #971a1d
+
+.user-menu
+  display: none
+  .col:first-child
+    position: relative
+    .username
+      position: absolute
+      left: -10px
+      top: 0
+      width: $column-width + $gutter-width + $gutter-width / 2
+      display: inline-block
+      margin-top: $leading
+      color: #971a1d
+      font-weight: bold
+      background: transparent url('../assets/header/arrow-red-down.png')
+      background-size: 8px 5px
+      background-position: 95% center
+      background-repeat: no-repeat
+      padding: 0 10px
+      border: 1px solid transparent
+      &:hover
+        border: 1px solid #971a1d
+
+  .cart,
+  .alarm
+    display: inline-block
+    height: $leading
+    margin-top: $leading
+    overflow: hidden
+    padding-left: 26px
+    width: 26px
+    background-repeat: no-repeat
+    background-size: cover
+  .cart
+    background-image: url('../assets/icons/icons.png')
+    background-position: 3px -20px
+  .alarm
+    background-image: url('../assets/icons/icons.png')
+    background-position: 3px 1px
+
 
 .navigation
   margin-top: $leading * 2
-  list-style: none
-  padding-left: 0
   .nav-item
     display: block
     text-align: center
     text-transform: uppercase
     font-weight: bold
     border-bottom: 2px solid transparent
+    border-radius: 2px
     &:hover
       color: #971a1d
       border-bottom: 2px solid #bb2035
     &:active
       color: #fff
       background: #bb2035
-      border-radius: 2px
 
 
 .filter
   margin-top: $leading
-  border-top: 2px solid #bb2035
-  height: $leading * 2
   position: relative
   & > .col
+    border-top: 2px solid #bb2035
     background: #f0f0f0
     text-align: center
     color: #97191c
@@ -85,11 +123,12 @@
     padding-top: $leading / 2
     font-weight: bold
     height: $leading * 2
+    overflow: hidden
     &:hover
       position: absolute
       top: 0
       left: 0
-      height: $leading * 11
+      height: $leading * 12
       background-color: #f0f0f0
   .icon-filter
     display: inline-block
@@ -100,3 +139,45 @@
     width: 20px
     height: $leading / 1.5
     margin-right: 8px
+  .filter-age, .filter-style
+    text-align: left
+    margin-top: $leading * 2.5
+    dl
+      +clearfix
+    dl > dt, dl > dd
+      float: left
+    dl > dt
+      margin-right: $gutter-width
+    dl > dd
+      cursor: pointer
+      width: $column-width
+      height: $leading
+      margin-right: $gutter-half-width
+      text-align: center
+      display: block
+      height: 100%
+      border-radius: 2px
+      background: #aaa
+      color: #fff
+      font-weight: bold
+      font-size: 1.2rem
+      line-height: $leading
+      &.active
+        background: #ba2034
+  .filter-style
+    margin-top: $leading
+  .filter-btn-group
+    margin-top: $leading * 2
+    button
+      color: #fff
+      height: $leading * 2 - 10
+      border-radius: 15px
+      background: #aaa
+      font-weight: bold
+      border: none
+      padding: 0 20px
+      font-size: 1.4rem
+      margin-right: 10px
+      cursor: pointer
+      &:hover, &:active
+        background: #ba2034

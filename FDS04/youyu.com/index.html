@@ -14,14 +14,37 @@
   <!-- Header -->
   <header class="container header">
     <!-- Row -->
-    <div class="row">
+    <div class="row isolate">
       <!-- Brand(Logo) End -->
-      <div class="col is-3 brand">
+      <div class="col is-3 logo">
         <img src="assets/header/logo.svg" alt="">
       </div>
       <!-- Brand(Logo) End -->
+      <!-- My Menu -->
+      <div class="col is-2 push-9">
+        <div class="row is-nested my-menu">
+          <div class="col is-1">
+            <a href="#" class="signup">회원가입</a>
+          </div>
+          <div class="col is-1 ">
+            <a href="#" class="signin">로그인</a>
+          </div>
+        </div>
+        <div class="row is-nested user-menu">
+          <div class="col is-1">
+            <!-- This first child of is-1 has relative. space collapsed -->
+            <a href="#" class="username">mkharp64</a>
+          </div>
+          <div class="col is-1 offset-1">
+            <!-- Since, the first child space collapsed, offset-1 to place it -->
+            <a href="#" class="cart">카트</a>
+            <a href="#" class="alarm">알람</a>
+          </div>
+        </div>
+      </div>
+      <!-- My Menu End -->
       <!-- Search Bar -->
-      <div class="col is-5 search-form">
+      <div class="col is-5 push-2 search-form">
         <form action="#" class="">
           <fieldset>
             <legend>검색 폼</legend>
@@ -32,22 +55,10 @@
         </form>
       </div>
       <!-- Search Bar End -->
-      <!-- My Menu -->
-      <div class="col is-2 offset-2">
-        <div class="row is-nested my-menu">
-          <div class="col is-1">
-            <a href="#" class="signup">회원가입</a>
-          </div>
-          <div class="col is-1">
-            <a href="#" class="signin">로그인</a>
-          </div>
-        </div>
-      </div>
-      <!-- My Menu End -->
     </div>
     <!-- Row End -->
 
-    <!-- Navigation -->
+    <!-- Navigation row -->
     <ul class="row navigation">
       <li class="col is-1"><a href="#" class="nav-item">main</a></li>
       <li class="col is-1"><a href="#" class="nav-item">brand</a></li>
@@ -62,27 +73,267 @@
       <li class="col is-1"><a href="#" class="nav-item">summer</a></li>
       <li class="col is-1"><a href="#" class="nav-item">etc</a></li>
     </ul>
-    <!-- Navigation End -->
+    <!-- Navigation row End -->
     <!-- Filter -->
     <div class="row filter">
       <div class="col is-12">
         <span class="icon-filter"></span>필터를 설정하세요
+        <div class="filter-age">
+          <dl>
+            <dt>연령대</dt>
+            <dd>10대</dd>
+            <dd>20대</dd>
+            <dd>30대</dd>
+          </dl>
+        </div>
+        <div class="filter-style">
+          <dl>
+            <dt>스타일</dt>
+            <dd>소녀룩</dd>
+            <dd>모던시크</dd>
+            <dd>심플베이지</dd>
+            <dd>맨틱</dd>
+            <dd>오피스룩</dd>
+            <dd>캠퍼스룩</dd>
+            <dd>빈티지</dd>
+            <dd>트레이닝</dd>
+          </dl>
+        </div>
+        <div class="filter-btn-group">
+          <button type="button" class="btn-reset">초기화</button>
+          <button type="button" class="btn-filtered">필터 선택 완료</button>
+        </div>
       </div>
     </div>
     <!-- Filter End -->
-  </div>
+  </header>
   <!-- Header End -->
+
   <!-- Main Contents -->
   <div class="container">
-    <div class="row">
-      <div class="col is-12" style="background: blue">
-        main field
+    <!-- Banner -->
+    <div class="row banner">
+      <div class="col is-12">
+        <a href="#">
+          <img src="assets/banner/banner-01.jpg" alt="배너 이미지">
+        </a>
+      </div>
+      <div class="col is-12">
+        <div class="banner-control">
+          <a href="#"></a>
+          <a href="#"></a>
+          <a href="#"></a>
+          <a href="#"></a>
+          <a href="#"></a>
+          <a href="#"></a>
+          <a href="#"></a>
+          <a href="#"></a>
+          <a href="#"></a>
+          <a href="#" class="active"></a>
+        </div>
       </div>
     </div>
+    <!-- Banner End -->
+    <!-- Best Seller -->
+    <div class="row best-seller">
+      <div class="col is-12">
+        <h2 class="heading">베스트셀러</h2>
+      </div>
+      <!-- item 1 -->
+      <div class="col is-3">
+        <a href="#"><img src="assets/best-seller/bs-seller-01.jpg" alt="베스트셀러1"></a>
+
+        <h5 class="brand">Zemma World</h5>
+        <p class="title">Puppy-코튼니트</p>
+
+        <div class="row is-nested">
+          <div class="col is-1">
+            <span class="price">39,000원</span>
+          </div>
+          <div class="col is-1">
+            <button type="button" class="btn-favorite active"></button>
+          </div>
+        </div>
+      </div>
+      <!-- item 2 -->
+      <div class="col is-3">
+        <a href="#"><img src="assets/best-seller/bs-seller-02.jpg" alt="베스트셀러1"></a>
+
+        <h5 class="brand">Myblin</h5>
+        <p class="title">버튼 체크 원피스</p>
+
+        <div class="row is-nested">
+          <div class="col is-1">
+            <span class="price">41,000원</span>
+          </div>
+          <div class="col is-1">
+            <button type="button" class="btn-favorite"></button>
+          </div>
+        </div>
+      </div>
+      <!-- item 3 -->
+      <div class="col is-3">
+        <a href="#"><img src="assets/best-seller/bs-seller-03.jpg" alt="베스트셀러1"></a>
+
+        <h5 class="brand">BULLAN GIRL</h5>
+        <p class="title">아미라벨맨투맨</p>
+
+        <div class="row is-nested">
+          <div class="col is-1">
+            <span class="price">12,500원</span>
+          </div>
+          <div class="col is-1">
+            <button type="button" class="btn-favorite"></button>
+          </div>
+        </div>
+      </div>
+      <!-- item 4 -->
+      <div class="col is-3">
+        <a href="#"><img src="assets/best-seller/bs-seller-04.jpg" alt="베스트셀러1"></a>
+
+        <h5 class="brand">MINIBBONG</h5>
+        <p class="title">Night-스키니팬츠</p>
+
+        <div class="row is-nested">
+          <div class="col is-1">
+            <span class="price">29,000원</span>
+          </div>
+          <div class="col is-1">
+            <button type="button" class="btn-favorite active"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Best Seller End -->
+    <!-- Brand sale -->
+    <div class="row brand-sale">
+      <div class="col is-12">
+        <h2 class="heading">브랜드</h2>
+      </div>
+      <!-- Item 1 -->
+      <div class="col is-3">
+        <a href="#">
+          <img src="assets/brand/brand-01.jpg" alt="브랜드1">
+          <h4 class="brand-name">mixxmix</h4>
+        </a>
+        <div class="brand-desc">
+          <div class="brand-title">01. mixxmix</div>
+          <button type="button" class="btn-favorite"></button>
+        </div>
+      </div>
+      <!-- Item 2 -->
+      <div class="col is-3">
+        <a href="#">
+          <img src="assets/brand/brand-02.jpg" alt="브랜드2">
+          <h4 class="brand-name">REINE</h4>
+        </a>
+        <div class="brand-desc">
+          <div class="brand-title">02. REINE</div>
+          <button type="button" class="btn-favorite"></button>
+        </div>
+      </div>
+      <!-- Item 3 -->
+      <div class="col is-3">
+        <a href="#">
+          <img src="assets/brand/brand-03.jpg" alt="브랜드3">
+          <h4 class="brand-name">BANHALA</h4>
+        </a>
+        <div class="brand-desc">
+          <div class="brand-title">03. BANHALA</div>
+          <button type="button" class="btn-favorite"></button>
+        </div>
+      </div>
+      <!-- Item 4 -->
+      <div class="col is-3">
+        <a href="#">
+          <img src="assets/brand/brand-04.jpg" alt="브랜드4">
+          <h4 class="brand-name">CHERRYKOKO</h4>
+        </a>
+        <div class="brand-desc">
+          <div class="brand-title">04. CHERRYKOKO</div>
+          <button type="button" class="btn-favorite"></button>
+        </div>
+      </div>
+    </div>
+    <!-- Brand sale End -->
+    <!-- New product -->
+    <div class="row new-product">
+      <div class="col is-12">
+        <h2 class="heading">신상품</h2>
+      </div>
+      <!-- item 1 -->
+      <div class="col is-3">
+        <a href="#"><img src="assets/new-items/new-product-01.jpg" alt="신상품1"></a>
+
+        <h5 class="brand">Mono Babie</h5>
+        <p class="title">엘렌 니트원피스</p>
+
+        <div class="row is-nested">
+          <div class="col is-1">
+            <span class="price">55,000원</span>
+          </div>
+          <div class="col is-1">
+            <button type="button" class="btn-favorite active"></button>
+          </div>
+        </div>
+      </div>
+      <!-- item 2 -->
+      <div class="col is-3">
+        <a href="#"><img src="assets/new-items/new-product-02.jpg" alt="신상품2"></a>
+
+        <h5 class="brand">From Beginning</h5>
+        <p class="title">Ohkoos vintage Knit</p>
+
+        <div class="row is-nested">
+          <div class="col is-1">
+            <span class="price">26,600원</span>
+          </div>
+          <div class="col is-1">
+            <button type="button" class="btn-favorite"></button>
+          </div>
+        </div>
+      </div>
+      <!-- item 3 -->
+      <div class="col is-3">
+        <a href="#"><img src="assets/new-items/new-product-03.jpg" alt="신상품3"></a>
+
+        <h5 class="brand">Zemma World</h5>
+        <p class="title">Tied-골지니트</p>
+
+        <div class="row is-nested">
+          <div class="col is-1">
+            <span class="price">22,000원</span>
+          </div>
+          <div class="col is-1">
+            <button type="button" class="btn-favorite active"></button>
+          </div>
+        </div>
+      </div>
+      <!-- item 4 -->
+      <div class="col is-3">
+        <a href="#"><img src="assets/new-items/new-product-04.jpg" alt="신상품4"></a>
+
+        <h5 class="brand">daily monday</h5>
+        <p class="title">Buckle Wrap mini skirt</p>
+
+        <div class="row is-nested">
+          <div class="col is-1">
+            <span class="price">27,000원</span>
+          </div>
+          <div class="col is-1">
+            <button type="button" class="btn-favorite active"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- New product End -->
   </div>
   <!-- Main Contents End -->
+  <div class="row" style="height: 500px"></div>
+  <!-- just margin to see it better -->
 
-  <script src="js/toggleGrid.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="js/script.js"></script>
 </body>
 
 </html>
