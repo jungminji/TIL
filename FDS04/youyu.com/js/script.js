@@ -5,7 +5,22 @@ $( () => {
     if(e.keyCode === 71){
       $('body').toggleClass('grid-guide');
     }
+    if(e.keyCode === 75){
+      $('.signup').hide();
+      $('.signin').hide();
+      $('.username').css('display','block');
+      $('.cart').css('display','block');
+      $('.alarm').css('display','block');
+    }
+    if(e.keyCode === 76){
+      $('.signup').css('display','block');
+      $('.signin').css('display','block');
+      $('.username').hide();
+      $('.cart').hide();
+      $('.alarm').hide();
+    }
   })
+
 
   // Filter toggle
   $('.filter-age dd').click( (e) => {

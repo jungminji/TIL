@@ -357,7 +357,6 @@ header {
 
 .menu {
   position: relative;
-  /*background-color: blue */
   width: 50%;
   float: left;
 }
@@ -372,37 +371,28 @@ header {
   clear: both;
 }
 
-.signup, .signin {
+.signup, .signin, .username {
   display: block;
-  width: 90%;
   margin: 20px auto 0 auto;
   border: 1px solid transparent;
   border-radius: 2px;
   color: #971a1d;
-  text-align: center;
   font-weight: bold;
 }
-.signup:hover, .signin:hover {
+.signup:hover, .signin:hover, .username:hover {
   border: 1px solid #971a1d;
 }
 
+.signup, .signin {
+  width: 90%;
+  text-align: center;
+}
+
 .username {
-  display: block;
-  width: 105%;
-  margin: 20px auto 0 auto;
-  border: 1px solid transparent;
-  border-radius: 2px;
+  width: 108%;
   color: #971a1d;
   padding-left: 5px;
-  font-weight: bold;
-  /*background-color: grey */
-  background-image: url("../assets/header/arrow-red-down.png");
-  background-size: 8px 5px;
-  background-position: 100% center;
-  background-repeat: no-repeat;
-}
-.username:hover {
-  border: 1px solid #971a1d;
+  background: url("../assets/icons/icons.png") 185% -376px/50px no-repeat;
 }
 
 .cart, .alarm {
@@ -411,101 +401,56 @@ header {
   float: left;
   width: 30px;
   height: 21px;
-  padding-left: 25px;
+  padding-left: 30px;
   overflow: hidden;
-  background-size: auto;
 }
 
 .cart {
   margin-left: 15%;
-  background-image: url("../assets/icons/icons.png");
-  background-position: 0 -20px;
+  background: url("../assets/icons/icons.png") center 3px/cover no-repeat;
 }
 
 .alarm {
-  background-image: url("../assets/icons/icons.png");
-  background-position: 0 1px;
+  background: url("../assets/icons/icons.png") center -20px/cover no-repeat;
 }
 
-.user-menu {
+.username, .cart, .alarm {
   display: none;
 }
-.user-menu .col:first-child {
-  position: relative;
-}
-.user-menu .col:first-child .username {
-  position: absolute;
-  left: -10px;
-  top: 0;
-  width: 100px;
-  display: inline-block;
-  margin-top: 21px;
-  color: #971a1d;
-  font-weight: bold;
-  background: transparent url("../assets/header/arrow-red-down.png");
-  background-size: 8px 5px;
-  background-position: 95% center;
-  background-repeat: no-repeat;
-  padding: 0 10px;
-  border: 1px solid transparent;
-}
-.user-menu .col:first-child .username:hover {
-  border: 1px solid #971a1d;
-}
-.user-menu .cart,
-.user-menu .alarm {
-  display: inline-block;
-  height: 21px;
-  margin-top: 21px;
-  overflow: hidden;
-  padding-left: 26px;
-  width: 26px;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.user-menu .cart {
-  background-image: url("../assets/icons/icons.png");
-  background-position: 3px -20px;
-}
-.user-menu .alarm {
-  background-image: url("../assets/icons/icons.png");
-  background-position: 3px 1px;
-}
 
-.search-form {
+.search {
   margin-top: 10.5px;
   padding-left: 80px;
 }
-.search-form fieldset {
+.search fieldset {
   position: relative;
 }
-.search-form legend, .search-form label {
+.search legend, .search label {
   display: block;
   width: 0;
   height: 0;
   padding-left: 20px;
   overflow: hidden;
 }
-.search-form .search-bar {
-  border: 2px solid #555656;
-  height: 42px;
+.search .input {
   width: 360px;
-  color: #9c9c9c;
-  font-size: 1.4rem;
+  height: 42px;
+  border: 2px solid #555656;
   padding-left: 10px;
+  color: #9c9c9c;
 }
-.search-form .search-btn {
+.search .btn-mag {
   position: absolute;
   top: 10.5px;
   right: 3%;
-  width: 29px;
+  width: 35px;
   height: 21px;
   border: none;
-  background: url("../assets/icons/icons.png");
-  background-size: cover;
-  background-position: 5px -205px;
-  background-repeat: no-repeat;
+  background: url("../assets/icons/icons.png") center -190px/cover no-repeat;
   cursor: pointer;
+}
+.search .btn-mag:focus {
+  outline: none;
 }
 
 .navigation {
@@ -528,11 +473,28 @@ header {
   background: #bb2035;
 }
 
-.filter {
+.filter-heading {
+  position: relative;
+  color: #971a1d;
+  font-size: 1.4rem;
+  padding-left: 25px;
+}
+.filter-heading:before {
+  content: "";
+  display: block;
+  width: 35px;
+  height: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url("../assets/icons/icons.png") center -92px/cover no-repeat;
+}
+
+.none {
   margin-top: 21px;
   position: relative;
 }
-.filter > .col {
+.none > .col {
   border-top: 2px solid #bb2035;
   background: #f0f0f0;
   text-align: center;
@@ -543,14 +505,14 @@ header {
   height: 42px;
   overflow: hidden;
 }
-.filter > .col:hover {
+.none > .col:hover {
   position: absolute;
   top: 0;
   left: 0;
   height: 252px;
   background-color: #f0f0f0;
 }
-.filter .icon-filter {
+.none .icon-filter {
   display: inline-block;
   background: url("../assets/icons/icons.png");
   background-size: cover;
@@ -560,27 +522,27 @@ header {
   height: 14px;
   margin-right: 8px;
 }
-.filter .filter-age, .filter .filter-style {
+.none .filter-age, .none .filter-style {
   text-align: left;
   margin-top: 52.5px;
 }
-.filter .filter-age dl::before, .filter .filter-style dl::before {
+.none .filter-age dl::before, .none .filter-style dl::before {
   content: "";
   display: table;
   clear: both;
 }
-.filter .filter-age dl::after, .filter .filter-style dl::after {
+.none .filter-age dl::after, .none .filter-style dl::after {
   content: "";
   display: table;
   clear: both;
 }
-.filter .filter-age dl > dt, .filter .filter-age dl > dd, .filter .filter-style dl > dt, .filter .filter-style dl > dd {
+.none .filter-age dl > dt, .none .filter-age dl > dd, .none .filter-style dl > dt, .none .filter-style dl > dd {
   float: left;
 }
-.filter .filter-age dl > dt, .filter .filter-style dl > dt {
+.none .filter-age dl > dt, .none .filter-style dl > dt {
   margin-right: 20px;
 }
-.filter .filter-age dl > dd, .filter .filter-style dl > dd {
+.none .filter-age dl > dd, .none .filter-style dl > dd {
   cursor: pointer;
   width: 70px;
   height: 21px;
@@ -595,16 +557,16 @@ header {
   font-size: 1.2rem;
   line-height: 21px;
 }
-.filter .filter-age dl > dd.active, .filter .filter-style dl > dd.active {
+.none .filter-age dl > dd.active, .none .filter-style dl > dd.active {
   background: #ba2034;
 }
-.filter .filter-style {
+.none .filter-style {
   margin-top: 21px;
 }
-.filter .filter-btn-group {
+.none .filter-btn-group {
   margin-top: 42px;
 }
-.filter .filter-btn-group button {
+.none .filter-btn-group button {
   color: #fff;
   height: 32px;
   border-radius: 15px;
@@ -616,7 +578,7 @@ header {
   margin-right: 10px;
   cursor: pointer;
 }
-.filter .filter-btn-group button:hover, .filter .filter-btn-group button:active {
+.none .filter-btn-group button:hover, .none .filter-btn-group button:active {
   background: #ba2034;
 }
 
