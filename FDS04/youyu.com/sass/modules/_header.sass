@@ -1,58 +1,71 @@
-.header
-  padding-top: $leading * 2
-  height: $leading * 9
 
-.logo
-  height: $leading * 3
-  & > img
-    width: auto
-    height: 100%
+$height: $leading
+$width: $column-width
 
-.search-form
-  margin-top: $leading / 2
-  padding-left: $column-width + $gutter-width/2
-  fieldset
-    position: relative
-  legend, label
-    display: block
-    width: 0
-    height: 0
-    padding-left: 20px
-    overflow: hidden
-  .search-bar
-    border: 2px solid #555656
-    height: $leading * 2
-    width: $column-width * 4 + $gutter-width * 4
-    color: #9c9c9c
-    font-size: 1.4rem
-    padding-left: 10px
-  .search-btn
-    position: absolute
-    top: $leading / 2
-    right: 3%
-    width: 29px
-    height: $leading
-    border: none
-    background: url('../assets/icons/icons.png')
-    background-size: cover
-    background-position: 5px -205px
-    background-repeat: no-repeat
-    cursor: pointer
+header
+  padding-top: $height * 2
 
-.my-menu
-  /*display: none*/
-  .signup, .signin
-    display: inline-block
-    width: 100%
-    margin-top: $leading
-    color: #971a1d
-    font-weight: bold
-    border: 1px solid transparent
-    line-height: $leading - 3
-    text-align: center
-    padding: 2px 8px
-    &:hover
-      border: 1px solid #971a1d
+.brand
+  width: auto
+  height: $height * 3
+
+
+.menu
+  position: relative
+  /*background-color: blue*/
+  width: 50%
+  float: left
+  +clearfix
+
+
+.signup, .signin
+  display: block
+  width: 90%
+  margin: $height - 1 auto 0 auto
+  border: 1px solid transparent
+  border-radius: 2px
+  color: #971a1d
+  text-align: center
+  font-weight: bold
+  &:hover
+    border: 1px solid #971a1d
+
+.username
+  display: block
+  width: 105%
+  margin: $height - 1 auto 0 auto
+  border: 1px solid transparent
+  border-radius: 2px
+  color: #971a1d
+  padding-left: 5px
+  font-weight: bold
+  /*background-color: grey*/
+  background-image: url('../assets/header/arrow-red-down.png')
+  background-size: 8px 5px
+  background-position: 100% center
+  background-repeat: no-repeat
+  &:hover
+    border: 1px solid #971a1d
+
+.cart, .alarm
+  margin-top: $height - 1
+  display: block
+  float: left
+  width: 30px
+  height: 21px
+  padding-left: 25px
+  overflow: hidden
+  background-size: auto
+.cart
+  margin-left: 15%
+  background-image: url('../assets/icons/icons.png')
+  background-position: 0 -20px
+.alarm
+  background-image: url('../assets/icons/icons.png')
+  background-position: 0 1px
+
+/////////////
+
 
 .user-menu
   display: none
@@ -92,6 +105,40 @@
   .alarm
     background-image: url('../assets/icons/icons.png')
     background-position: 3px 1px
+
+
+
+.search-form
+  margin-top: $leading / 2
+  padding-left: $column-width + $gutter-width/2
+  fieldset
+    position: relative
+  legend, label
+    display: block
+    width: 0
+    height: 0
+    padding-left: 20px
+    overflow: hidden
+  .search-bar
+    border: 2px solid #555656
+    height: $leading * 2
+    width: $column-width * 4 + $gutter-width * 4
+    color: #9c9c9c
+    font-size: 1.4rem
+    padding-left: 10px
+  .search-btn
+    position: absolute
+    top: $leading / 2
+    right: 3%
+    width: 29px
+    height: $leading
+    border: none
+    background: url('../assets/icons/icons.png')
+    background-size: cover
+    background-position: 5px -205px
+    background-repeat: no-repeat
+    cursor: pointer
+
 
 
 .navigation

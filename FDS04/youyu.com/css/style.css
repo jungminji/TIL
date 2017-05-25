@@ -108,6 +108,17 @@ h1 {
  *   -> If the variable already has an assignment, it will not be re-assigned
  * $leading-scale: is line-height
  * $leadinf: the actual height of row */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
 .grid-guide {
   position: relative;
 }
@@ -335,71 +346,85 @@ h1 {
   margin-left: 1090px;
 }
 
-.header {
+header {
   padding-top: 42px;
-  height: 189px;
 }
 
-.logo {
+.brand {
+  width: auto;
   height: 63px;
 }
-.logo > img {
-  width: auto;
-  height: 100%;
-}
 
-.search-form {
-  margin-top: 10.5px;
-  padding-left: 80px;
-}
-.search-form fieldset {
+.menu {
   position: relative;
+  /*background-color: blue */
+  width: 50%;
+  float: left;
 }
-.search-form legend, .search-form label {
-  display: block;
-  width: 0;
-  height: 0;
-  padding-left: 20px;
-  overflow: hidden;
+.menu::before {
+  content: "";
+  display: table;
+  clear: both;
 }
-.search-form .search-bar {
-  border: 2px solid #555656;
-  height: 42px;
-  width: 360px;
-  color: #9c9c9c;
-  font-size: 1.4rem;
-  padding-left: 10px;
-}
-.search-form .search-btn {
-  position: absolute;
-  top: 10.5px;
-  right: 3%;
-  width: 29px;
-  height: 21px;
-  border: none;
-  background: url("../assets/icons/icons.png");
-  background-size: cover;
-  background-position: 5px -205px;
-  background-repeat: no-repeat;
-  cursor: pointer;
+.menu::after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
-.my-menu {
-  /*display: none */
-}
-.my-menu .signup, .my-menu .signin {
-  display: inline-block;
-  width: 100%;
-  margin-top: 21px;
-  color: #971a1d;
-  font-weight: bold;
+.signup, .signin {
+  display: block;
+  width: 90%;
+  margin: 20px auto 0 auto;
   border: 1px solid transparent;
-  line-height: 18px;
+  border-radius: 2px;
+  color: #971a1d;
   text-align: center;
-  padding: 2px 8px;
+  font-weight: bold;
 }
-.my-menu .signup:hover, .my-menu .signin:hover {
+.signup:hover, .signin:hover {
   border: 1px solid #971a1d;
+}
+
+.username {
+  display: block;
+  width: 105%;
+  margin: 20px auto 0 auto;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  color: #971a1d;
+  padding-left: 5px;
+  font-weight: bold;
+  /*background-color: grey */
+  background-image: url("../assets/header/arrow-red-down.png");
+  background-size: 8px 5px;
+  background-position: 100% center;
+  background-repeat: no-repeat;
+}
+.username:hover {
+  border: 1px solid #971a1d;
+}
+
+.cart, .alarm {
+  margin-top: 20px;
+  display: block;
+  float: left;
+  width: 30px;
+  height: 21px;
+  padding-left: 25px;
+  overflow: hidden;
+  background-size: auto;
+}
+
+.cart {
+  margin-left: 15%;
+  background-image: url("../assets/icons/icons.png");
+  background-position: 0 -20px;
+}
+
+.alarm {
+  background-image: url("../assets/icons/icons.png");
+  background-position: 0 1px;
 }
 
 .user-menu {
@@ -445,6 +470,42 @@ h1 {
 .user-menu .alarm {
   background-image: url("../assets/icons/icons.png");
   background-position: 3px 1px;
+}
+
+.search-form {
+  margin-top: 10.5px;
+  padding-left: 80px;
+}
+.search-form fieldset {
+  position: relative;
+}
+.search-form legend, .search-form label {
+  display: block;
+  width: 0;
+  height: 0;
+  padding-left: 20px;
+  overflow: hidden;
+}
+.search-form .search-bar {
+  border: 2px solid #555656;
+  height: 42px;
+  width: 360px;
+  color: #9c9c9c;
+  font-size: 1.4rem;
+  padding-left: 10px;
+}
+.search-form .search-btn {
+  position: absolute;
+  top: 10.5px;
+  right: 3%;
+  width: 29px;
+  height: 21px;
+  border: none;
+  background: url("../assets/icons/icons.png");
+  background-size: cover;
+  background-position: 5px -205px;
+  background-repeat: no-repeat;
+  cursor: pointer;
 }
 
 .navigation {
