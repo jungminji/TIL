@@ -28,7 +28,7 @@ $susy: (
   // 설정 가능한 값: ( after, before, split, inside, inside-static (column-width 설정 필요) )
   // 기본 값: after
   // ※ inside 설정은 Padding으로 처리됨
-  gutter-position: after,
+  gutter-position: split,
 
   // [Container]
   // 컨테이너 요소의 최대 가로 폭(max-width) 값을 설정
@@ -50,7 +50,7 @@ $susy: (
 
   // Gutters
   // 거터의 폭 설정 (1/4, <gutter-width>/<column-width>)
-  gutters: 20px / 70px,
+  gutters: 20/70,
 
   // [Column Width]
   // 컬럼의 가로 폭 설정

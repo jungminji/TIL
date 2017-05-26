@@ -1,0 +1,114 @@
+$unit-w: 70px
+$unit-h: $base-line-height
+
+.header
+  height: $unit-h * 3
+  margin-top: $unit-h * 2
+  @extend %clearfix
+////////////////////////////////////////////////////////////////////////////////
+.brand
+  +span(3 at 1 of 12 isolate)
+  @extend %clearfix
+  img
+    width: auto
+    height: $unit-h * 3
+
+////////////////////////////////////////////////////////////////////////////////
+$icon-url: url('../assets/icons/icons.png')
+.user-menu
+  +span(last 2)
+  margin-top: $unit-h
+  .my-menu, .quick-menu
+    +span(1 no-gutters)
+  .quick-menu
+    +last
+
+.sign-up, .sign-in, .username
+  +span(100% no-gutters)
+  display: block
+  height: $unit-h
+  color: #971a1d
+  font-weight: bold
+  border: 2px solid transparent
+  border-radius: 2px
+  @extend %center-box-block
+  &:hover
+    border: 2px solid #971a1d
+
+.username
+  margin-left: -10px
+  padding-right: 20px
+  background: $icon-url 63px -376px / cover no-repeat
+  background-size: 50px
+
+.cart, .alarm
+  +span(50% no-gutters)
+  display: block
+  height: 0
+  padding: $unit-h 0 0 0
+  overflow: hidden
+.cart
+  background: $icon-url center 0 / cover no-repeat
+.alarm
+  +last
+  background: $icon-url center -26px / cover no-repeat
+
+////////////////////////////////////////////////////////////////////////////////
+
+.search
+  +span(5 at 5 of 12 isolate)
+  position: relative
+  legend, h2, label
+    @extend %sr-only
+  .search-bar
+    width: $unit-w * 5
+    height: $unit-h * 2 - 4
+    margin: $unit-h / 2 0 0 -10px
+    padding-left: 10px
+    border: 2px solid #555656
+    color: #aaa
+    font-size: $base-font-size
+  .btn-search
+    position: absolute
+    bottom: 8px
+    right: 17.5%
+    border: none
+    width: 30px
+    height: 30px
+    background: $icon-url -3px -253px / cover no-repeat
+    background-size: 47px
+
+////////////////////////////////////////////////////////////////////////////////
+
+.navigation
+  +break
+  @extend %clearfix
+  .nav-heading
+    @extend %sr-only
+
+.menu-item
+  +span(1)
+  a
+    display: block
+    margin-top: $unit-h * 2
+    color: #971a1d
+    text-align: center
+    font-weight: bold
+    text-transform: uppercase
+    border-bottom: 2px solid transparent
+    padding: 3px 0
+    @extend %center-box-block
+    &:hover
+      border-color: #971a1d
+    &:active
+      color: #fff
+      background: #971a1d
+////////////////////////////////////////////////////////////////////////////////
+.filter
+  +break
+  @extend %clearfix
+  .filter-heading
+    margin-top: $unit-h - 5
+    border-top: 2px solid #971a1d
+
+////////////////////////////////////////////////////////////////////////////////
