@@ -1,0 +1,16 @@
+{
+  "name": "youyu.com",
+  "version": "1.0.0",
+  "author": "Jungmin Ji",
+  "license": "ISC",
+  "description": "FDS04 - youyu.com",
+  "main": "index.js",
+  "scripts": {
+    "build-css": "node-sass --source-map true --output-style expanded sass/ -o css/",
+    "watch-css": "node-sass --watch --source-map true --output-style expanded sass/ -o css/"
+  },
+  "devDependencies": {
+    "node-sass": "^4.5.3",
+    "susy": "^2.2.12"
+  }
+}
