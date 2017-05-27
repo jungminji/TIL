@@ -1,6 +1,84 @@
 ////////////////////////////////////////////////////////////////////////////////
-main
+.main-contents
   +break
   @extend %clearfix
-  height: $unit-h * 10
-  background-color: aqua
+
+////////////////////////////////////////////////////////////////////////////////
+.carousel
+  height: $unit-h * 23 + 2
+  margin-top: $unit-h * 2
+  .slide img
+    width: 100%
+    height: $unit-h * 21
+  .carousel-control
+    margin-top: $unit-h
+    text-align: center
+    .controls
+      display: inline-block
+      width: 12px
+      height: 12px
+      margin: 2px 8px 0 0
+      background: #cbcbcb
+      border-radius: 50%
+      &.active
+        background: #bb2035
+////////////////////////////////////////////////////////////////////////////////
+.best-seller, .new-items
+  +break
+  height: $unit-h * 20
+  .best-seller-heading, .new-items-heading
+    +span(2)
+    font-size: 1.5rem
+  .best-seller-gallery, .new-items-gallery
+    +break
+    +span(12)
+    margin-top: $unit-h
+
+.item
+  $i-forgot-icon-heart-grey: url('../assets/icons/icon-heart-grey.png')
+  +span(3)
+  position: relative
+  box-sizing: border-box
+  border: 1px solid #ddd
+  padding-bottom: 17px
+  &:first-child
+    margin-left: -1px
+  &:last-child
+    margin-right: 0
+  img
+    width: 100%
+    height: $unit-h * 12
+  .item-brand, .item-name, .item-price
+    height: $unit-h
+    padding-left: 15px
+  .item-brand
+    font-weight: bold
+  .item-name
+    color: #acacac
+  .item-price
+    color: #97191d
+    margin-top: $unit-h
+    font-size: 1.35rem
+  .btn-favorite
+    position: absolute
+    right: 15px
+    bottom: 17px
+    width: $unit-h
+    height: $unit-h
+    border: none
+    background: $i-forgot-icon-heart-grey 2px center / cover no-repeat
+    background-size: 15px
+    cursor: pointer
+    &:focus
+      outline: none
+    &.active
+      background: $icon-url -4px -150px / cover no-repeat
+      background-size: 35px
+
+////////////////////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////////////////////////////////////////////
+
+
+
+////////////////////////////////////////////////////////////////////////////////

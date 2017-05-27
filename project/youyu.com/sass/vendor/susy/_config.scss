@@ -91,7 +91,7 @@ $susy: (
     // 그리드 모드
     // 설정 가능한 값: ( background, overlay )
     // ※ overlay 설정일 경우, 컨테이너 요소의 ::before 요소를 사용하여 오버레이 함.
-    output: background,
+    output: overlay,
 
     // [toggle]
     // 그리드 토글 버튼 위치
