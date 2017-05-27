@@ -20,6 +20,9 @@ a
 ////////////////////////////////////////////////////////////////////////////////
 /// Functions
 
+@function widthCalc($val : 1)
+  @return $unit-w * $val
+
 @function heightCalc($val : 1)
   @return $unit-h * $val
 
@@ -70,6 +73,7 @@ a
 
 %m-s-heading
   +span(2)
+  margin-bottom: heightCalc()
   font-size: 1.5rem
 
 %m-s-gallery-container

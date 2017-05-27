@@ -1,5 +1,6 @@
 .best-review
   @extend %m-s-container
+  height: heightCalc(18)
 
 .best-review-heading
   @extend %m-s-heading
@@ -12,22 +13,22 @@
 .best-review-gallery
   .item
     +span(2)
+    padding: heightCalc() 15px heightCalc() 15px
     img
-      height: heightCalc(10)
-    .item-brand, .item-desc, .item-price
-      height: $unit-h
-      padding-left: 15px
+      display: block
+      height: heightCalc(6)
     .item-brand
       font-weight: bold
-      margin-top: heightCalc(1.5)
+      height: heightCalc()
+      margin-top: heightCalc()
     .item-desc
-      max-height: $unit-h * 2
-      padding-right: 15px
+      height: heightCalc(2)
+      max-height: heightCalc(2)
       overflow: hidden
       text-overflow: ellipsis
     .item-price
       color: #97191d
-      margin-top: $unit-h
+      margin-top: heightCalc()
       font-size: 1.35rem
     .btn-favorite
       right: 10px
@@ -39,8 +40,8 @@
         background: $icon-url -4px -150px / cover no-repeat
         background-size: 35px
     .item-rate
-      margin-top: $unit-h
-      height: $unit-h
+      margin-top: heightCalc()
+      height: heightCalc()
       text-align: center
       button
         width: 0

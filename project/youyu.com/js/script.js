@@ -28,6 +28,7 @@ $( () => {
     if(e.keyCode === 87){
       $('section').toggleClass('component-bg-color');
       $('header').toggleClass('component-bg-color')
+      $('footer').toggleClass('component-bg-color')
     }
 
   })
