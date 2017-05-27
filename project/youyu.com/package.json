@@ -6,8 +6,8 @@
   "description": "FDS04 - youyu.com",
   "main": "index.js",
   "scripts": {
-    "build-css": "node-sass --source-map true --output-style expanded sass/ -o css/",
-    "watch-css": "node-sass --watch --source-map true --output-style expanded sass/ -o css/"
+    "build-css": "node-sass --source-map true --output-style compressed sass/ -o css/",
+    "watch-css": "node-sass --watch --source-map true --output-style compressed sass/ -o css/"
   },
   "devDependencies": {
     "node-sass": "^4.5.3",

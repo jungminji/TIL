@@ -2,13 +2,11 @@ $unit-w: 70px
 $unit-h: $base-line-height
 
 .header
-  height: $unit-h * 3
-  margin-top: $unit-h * 2
   @extend %clearfix
+  margin-top: $unit-h * 2
 ////////////////////////////////////////////////////////////////////////////////
 .brand
   +span(3 at 1 of 12 isolate)
-  @extend %clearfix
   img
     width: auto
     height: $unit-h * 3
@@ -25,13 +23,13 @@ $icon-url: url('../assets/icons/icons.png')
 
 .sign-up, .sign-in, .username
   +span(100% no-gutters)
+  @extend %center-box-block
   display: block
   height: $unit-h
   color: #971a1d
   font-weight: bold
   border: 2px solid transparent
   border-radius: 2px
-  @extend %center-box-block
   &:hover
     border: 2px solid #971a1d
 
@@ -89,6 +87,7 @@ $icon-url: url('../assets/icons/icons.png')
 .menu-item
   +span(1)
   a
+    @extend %center-box-block
     display: block
     margin-top: $unit-h * 2
     color: #971a1d
@@ -97,7 +96,6 @@ $icon-url: url('../assets/icons/icons.png')
     text-transform: uppercase
     border-bottom: 2px solid transparent
     padding: 3px 0
-    @extend %center-box-block
     &:hover
       border-color: #971a1d
     &:active
@@ -106,9 +104,28 @@ $icon-url: url('../assets/icons/icons.png')
 ////////////////////////////////////////////////////////////////////////////////
 .filter
   +break
+  position: relative
   @extend %clearfix
   .filter-heading
+    height: $unit-h * 2 - 2
     margin-top: $unit-h - 5
     border-top: 2px solid #971a1d
+    background-color: #f0f0f0
+    text-align: center
+    font-weight: bold
+    color: #971a1d
+    cursor: pointer
+    &:before
+      content: ''
+      height: 20%
+    .btn-filter
+      width: 42px
+      height: 24px
+      border: none
+      background-color: transparent
+      background-image: $icon-url
+      background-position: 8px -107px
+      background-size: cover
+      background-repeat: no-repeat
 
 ////////////////////////////////////////////////////////////////////////////////
