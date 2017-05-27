@@ -28,7 +28,7 @@ $susy: (
   // 설정 가능한 값: ( after, before, split, inside, inside-static (column-width 설정 필요) )
   // 기본 값: after
   // ※ inside 설정은 Padding으로 처리됨
-  gutter-position: after,
+  gutter-position: split,
 
   // [Container]
   // 컨테이너 요소의 최대 가로 폭(max-width) 값을 설정
@@ -97,7 +97,8 @@ $susy: (
     // 그리드 토글 버튼 위치
     // 설정 가능한 값: ( top right, <direction> )
     // ※ overlay 설정에서만 사용 가능.
-    toggle: top right
+    // Default: top right
+    toggle: bottom right
   ),
 
   // Use Custom

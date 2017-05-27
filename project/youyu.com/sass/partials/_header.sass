@@ -1,21 +1,18 @@
-$unit-w: 70px
-$unit-h: $base-line-height
-
 .header
   @extend %clearfix
-  margin-top: $unit-h * 2
+  margin-top: heightCalc(2)
 ////////////////////////////////////////////////////////////////////////////////
+/// Brand logo
 .brand
   +span(3 at 1 of 12 isolate)
   img
     width: auto
-    height: $unit-h * 3
+    height: heightCalc(3)
 
 ////////////////////////////////////////////////////////////////////////////////
-$icon-url: url('../assets/icons/icons.png')
 .user-menu
   +span(last 2)
-  margin-top: $unit-h
+  margin-top: heightCalc()
   .my-menu, .quick-menu
     +span(1 no-gutters)
   .quick-menu
@@ -25,7 +22,7 @@ $icon-url: url('../assets/icons/icons.png')
   +span(100% no-gutters)
   @extend %center-box-block
   display: block
-  height: $unit-h
+  height: heightCalc()
   color: #971a1d
   font-weight: bold
   border: 2px solid transparent
@@ -36,14 +33,14 @@ $icon-url: url('../assets/icons/icons.png')
 .username
   margin-left: -10px
   padding-right: 20px
-  background: $icon-url 63px -376px / cover no-repeat
-  background-size: 50px
+  background: $icon-url 62px -414px / 55px no-repeat
 
 .cart, .alarm
   +span(50% no-gutters)
   display: block
-  height: 0
-  padding: $unit-h 0 0 0
+  width: 0
+  height: heightCalc()
+  padding: 0 0 0 35px
   overflow: hidden
 .cart
   background: $icon-url center 0 / cover no-repeat
@@ -59,9 +56,9 @@ $icon-url: url('../assets/icons/icons.png')
   legend, h2, label
     @extend %sr-only
   .search-bar
-    width: $unit-w * 5
-    height: $unit-h * 2 - 4
-    margin: $unit-h / 2 0 0 -10px
+    width: heightCalc(5)
+    height: heightCalc(2) - 4
+    margin: heightCalc(0.5) 0 0 -10px
     padding-left: 10px
     border: 2px solid #555656
     color: #aaa
@@ -92,7 +89,7 @@ $icon-url: url('../assets/icons/icons.png')
   a
     @extend %center-box-block
     display: block
-    margin-top: $unit-h * 2
+    margin-top: heightCalc(2)
     color: #971a1d
     text-align: center
     font-weight: bold
@@ -110,8 +107,8 @@ $icon-url: url('../assets/icons/icons.png')
   position: relative
   @extend %clearfix
   .filter-heading
-    height: $unit-h * 2 - 2
-    margin-top: $unit-h - 5
+    height: heightCalc(2) - 2
+    margin-top: heightCalc() - 5
     border-top: 2px solid #971a1d
     background-color: #f0f0f0
     text-align: center

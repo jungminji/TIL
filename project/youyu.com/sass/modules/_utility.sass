@@ -1,5 +1,15 @@
+////////////////////////////////////////////////////////////////////////////////
+/// Susy configuration
 $base-line-height: 21px
 $base-font-size: 14px
+////////////////////////////////////////////////////////////////////////////////
+/// Custom global variables and styles
+
+$unit-w: 70px
+$unit-h: $base-line-height
+
+$icon-url: url('../assets/icons/icons.png')
+$i-forgot-icon-heart-grey: url('../assets/icons/icon-heart-grey.png')
 
 html, body
   font-size: $base-font-size
@@ -7,13 +17,31 @@ html, body
 a
   text-decoration: none
   color: #000
+////////////////////////////////////////////////////////////////////////////////
+/// Functions
 
+@function heightCalc($val : 1)
+  @return $unit-h * $val
+
+////////////////////////////////////////////////////////////////////////////////
+/// General utilities
 %clearfix
   &:before, &:after
     content: ""
     display: block
     clear: both
 
+%sr-only
+  position: absolute
+  width: 1px
+  height: 1px
+  padding: 0
+  margin: -1px
+  overflow: hidden
+  clip: rect(0,0,0,0)
+  border: 0
+
+/// yamoo9 full center placeholder
 %center-box-block
 	text-align: center
 
@@ -33,12 +61,73 @@ a
 		display: inline-block
 		vertical-align: middle
 
-%sr-only
+////////////////////////////////////////////////////////////////////////////////
+/// Main contents utilities
+%m-s-container
+  +break
+  height: heightCalc(19)
+  margin-top: heightCalc()
+
+%m-s-heading
+  +span(2)
+  font-size: 1.5rem
+
+%m-s-gallery-container
+  +break
+  +span(12)
+  .item
+    @extend %item-default-layout
+
+%item-default-layout
+  position: relative
+  box-sizing: border-box
+  border: 1px solid #ddd
+  padding: heightCalc() 15px heightCalc() 15px
+  &:first-child
+    margin-left: 0
+  &:last-child
+    margin-right: 0
+  a
+    display: block
+  img
+    display: block
+    width: 100%
+
+%btn-fav-default-style
   position: absolute
-  width: 1px
-  height: 1px
-  padding: 0
-  margin: -1px
-  overflow: hidden
-  clip: rect(0,0,0,0)
-  border: 0
+  width: $unit-h
+  height: $unit-h
+  border: none
+  background: $i-forgot-icon-heart-grey 2px center / cover no-repeat
+  background-size: 15px
+  cursor: pointer
+////////////////////////////////////////////////////////////////////////////////
+/// Best seller and New item specific style mixin
+=bs-ni-styles($name)
+  .#{$name}-gallery
+  .item
+    +span(3)
+    img
+      height: heightCalc(10)
+    .item-brand, .item-name, .item-price
+      height: $unit-h
+    .item-brand
+      margin-top: $unit-h
+      font-weight: bold
+    .item-name
+      color: #acacac
+    .item-price
+      color: #97191d
+      margin-top: $unit-h
+      font-size: 1.35rem
+    .btn-favorite
+      right: 15px
+      bottom: 20px
+      @extend %btn-fav-default-style
+      &:focus
+        outline: none
+      &.active
+        background: $icon-url -4px -150px / cover no-repeat
+        background-size: 35px
+
+////////////////////////////////////////////////////////////////////////////////

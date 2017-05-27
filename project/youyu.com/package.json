@@ -10,6 +10,7 @@
     "watch-css": "node-sass --watch --source-map true --output-style compressed sass/ -o css/"
   },
   "devDependencies": {
+    "jquery": "^3.2.1",
     "node-sass": "^4.5.3",
     "susy": "^2.2.12"
   }

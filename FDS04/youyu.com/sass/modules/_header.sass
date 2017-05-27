@@ -112,20 +112,34 @@ header
 // Filter
 .filter-heading
   position: relative
+  height: $unit-h * 2
+  display: inline-block
   width: 100%
   background: #f0f0f0
   color: #971a1d
   font-size: 1.4rem
-  padding-left: 25px
+  text-align: center
+  border-top: 2px solid #971a1d
+  padding: $unit-h / 2 0 0 25px
+  cursor: pointer
   &:before
     content: ''
     display: block
     width: 35px
     height: $unit-h - 1
     position: absolute
-    top: 0
-    left: 0
+    top: $unit-h / 2
+    left: 43%
     background: $icons center -92px / cover no-repeat
+
+.filter-option
+  position: fixed
+  width: $container-width - $gutter-width
+  height: $unit-h * 9
+  background: #f0f0f0
+
+// HERE
+
 
 .none
   margin-top: $leading
