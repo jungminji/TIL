@@ -1,0 +1,17 @@
+.tips
+  @extend %m-s-container
+  height: heightCalc(13)
+
+.tips-heading
+  @extend %m-s-heading
+
+.tips-gallery
+  @extend %m-s-gallery-container
+  .item
+    @extend %item-default-layout
+    padding-bottom: 0
+    border: 0
+  .item
+    +span(4)
+    img
+      height: heightCalc(11)

@@ -1,0 +1,55 @@
+.best-review
+  @extend %m-s-container
+
+.best-review-heading
+  @extend %m-s-heading
+
+.best-review-gallery
+  @extend %m-s-gallery-container
+  .item
+    @extend %item-default-layout
+
+.best-review-gallery
+  .item
+    +span(2)
+    img
+      height: heightCalc(10)
+    .item-brand, .item-desc, .item-price
+      height: $unit-h
+      padding-left: 15px
+    .item-brand
+      font-weight: bold
+      margin-top: heightCalc(1.5)
+    .item-desc
+      max-height: $unit-h * 2
+      padding-right: 15px
+      overflow: hidden
+      text-overflow: ellipsis
+    .item-price
+      color: #97191d
+      margin-top: $unit-h
+      font-size: 1.35rem
+    .btn-favorite
+      right: 10px
+      bottom: 65px
+      @extend %btn-fav-default-style
+      &:focus
+        outline: none
+      &.active
+        background: $icon-url -4px -150px / cover no-repeat
+        background-size: 35px
+    .item-rate
+      margin-top: $unit-h
+      height: $unit-h
+      text-align: center
+      button
+        width: 0
+        height: 15px
+        padding-left: 7px
+        text-indent: 10px
+        overflow: hidden
+        background: $icon-url -2px -161px / 25px no-repeat
+        border: none
+        cursor: pointer
+        &:focus
+          outline: none
