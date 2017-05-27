@@ -27,6 +27,7 @@
   font-weight: bold
   border: 2px solid transparent
   border-radius: 2px
+  transition: 0.5s
   &:hover
     border: 2px solid #971a1d
 
@@ -94,10 +95,17 @@
     text-align: center
     font-weight: bold
     text-transform: uppercase
-    border-bottom: 2px solid transparent
     padding: 3px 0
-    &:hover
-      border-color: #971a1d
+    &:after
+      content: ''
+      display: block
+      height: 2px
+      margin: auto
+      width: 0
+      transition: width .3s ease, background-color .5s ease
+    &:hover:after
+      width: 100%
+      background: #971a1d
     &:active
       color: #fff
       background: #971a1d
