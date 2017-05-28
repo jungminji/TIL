@@ -1,0 +1,65 @@
+.footer
+  +break
+  margin-top: heightCalc(2) - 2
+  h2
+    @extend %sr-only
+////////////////////////////////////////////////////////////////////////////////
+.footer-link
+  +span(12)
+  height: heightCalc(2)
+  background: #4b4b4b
+  @extend %clearfix
+  .link
+    position: relative
+    float: left
+    a
+      display: block
+      padding: 0 25px
+      color: #fff
+      line-height: heightCalc(2)
+      text-align: center
+      span
+        display: inline-block
+        padding: 0 20px
+        line-height: heightCalc(1.5)
+        border-radius: 3px
+    &:hover span
+      background-color: #fff
+      color: #4b4b4b
+    &:before, &:last-child:after
+      content: ''
+      position: absolute
+      top: 0
+      display: inline-block
+      width: 2px
+      height: heightCalc(2)
+      background-color: #fff
+      transform: scaleY(0.5)
+    &:before
+      left: 0
+    &:last-child:after
+      right: 0
+////////////////////////////////////////////////////////////////////////////////
+.footer-contents
+  +break
+  height: heightCalc(9)
+
+.address
+  +span(8)
+  height: heightCalc(3)
+  line-height: 1.4rem
+  margin-top: heightCalc(2)
+  background-color: yellow
+
+.customer-service
+  +span(2)
+  +last
+  height: heightCalc(5)
+  margin-top: heightCalc(2)
+  background-color: yellow
+
+.more-links
+  +span(5)
+  margin-top: heightCalc(1)
+  height: heightCalc(2)
+  background-color: red
