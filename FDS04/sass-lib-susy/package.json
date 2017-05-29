@@ -1,8 +1,0 @@
-{
-  "scripts": {
-    "sass-watch": "node-sass --output-style expanded sass/style.sass css/style.css --watch --source-map true"
-  },
-  "devDependencies": {
-    "susy": "^2.2.12"
-  }
-}

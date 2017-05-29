@@ -1,0 +1,45 @@
+@import partials/color
+@import partials/layout
+@import partials/mixin
+
+body
+  color: $color2
+  background-color: $color4
+
+div
+  +border-radius(50px)
+
+%placeholder
+  border: 1px solid #aaa
+  border-radius: 10px
+  padding: 10px
+  background: #eee
+
+.example
+  @extend %placeholder
+.extend-example
+  @extend %placeholder
+
+  margin: 10px
+
+.simple-extend
+  border: 1px solid #aaa
+  color: #f00
+
+.useing-extend
+  @extend .simple-extend
+
+$width: 500
+$height: 50px
+.favorite
+  +clearfix
+  // Add "px"
+  width: $width * 1px + 50
+  // Remove "px"
+  height: $height / 1px + 50
+
+
+// iteration
+@for $i from 1 to 5
+  .col-#{$i}
+    width: 100px * $i

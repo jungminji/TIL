@@ -1,0 +1,21 @@
+body
+  padding: 50px
+
+.box
+  min-height: 50px
+  background: yellow
+  width: 100px
+  float: left
+
+.box-float
+  margin-right: 10px
+
+.box-isolate
+  margin-right: -100%
+
+.col-2
+  width: 200px
+
+@for $i from 1 through 4
+  .isolate-order-#{$i}
+    margin-left: 110px * $i

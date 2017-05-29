@@ -1,0 +1,77 @@
+@charset "utf-8";
+body {
+  margin: 0;
+}
+
+.wrapper {
+  font-family: sans-serif;
+  text-align: center;
+  max-width: 940px;
+  margin: 0 auto;
+  margin-top: 40px;
+  position: relative;
+}
+.wrapper::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: repeating-linear-gradient(to right, rgba(0,0,0,0.23) 0px, rgba(0,0,0,0.23) 60px, transparent 60px, transparent 80px);
+}
+.row::before,
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.col {
+  min-height: 50px;
+  line-height: 50px;
+  width: 100%;
+  background: #FFCB47;
+  margin-bottom: 15px;
+  float: left;
+  box-sizing: border-box;
+  border: 1px solid #f00;
+}
+.row .col:first-child {
+  margin-left: 0;
+}
+.col-1 {
+  width: calc((100% / 12) * 1);
+}
+.col-2 {
+  width: calc((100% / 12) * 2);
+}
+.col-3 {
+  width: calc((100% / 12) * 3);
+}
+.col-4 {
+  width: calc((100% / 12) * 4);
+}
+.col-5 {
+  width: calc((100% / 12) * 5);
+}
+.col-6 {
+  width: calc((100% / 12) * 6);
+}
+.col-7 {
+  width: calc((100% / 12) * 7);
+}
+.col-8 {
+  width: calc((100% / 12) * 8);
+}
+.col-9 {
+  width: calc((100% / 12) * 9);
+}
+.col-10 {
+  width: calc((100% / 12) * 10);
+}
+.col-11 {
+  width: calc((100% / 12) * 11);
+}
+.col-12 {
+  width: 100%;
+}

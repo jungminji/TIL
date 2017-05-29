@@ -17,10 +17,15 @@ html
 body
   font-size: $base-font-size
   line-height: $base-line-height
-  
+
 a
   text-decoration: none
   color: #000
+  &:focus
+    outline-color: #971a1d
+
+input
+  outline-color: #971a1d
 ////////////////////////////////////////////////////////////////////////////////
 /// Functions
 
@@ -109,6 +114,7 @@ a
   background: $i-forgot-icon-heart-grey 2px center / cover no-repeat
   background-size: 15px
   cursor: pointer
+  
 ////////////////////////////////////////////////////////////////////////////////
 /// Best seller and New item specific style mixin
 =bs-ni-styles($name)

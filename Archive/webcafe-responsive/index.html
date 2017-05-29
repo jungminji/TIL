@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Responsive webcafe</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <div class="container header">
+    <div class="row" role="banner">
+      <div class="col col-m-1 col-t-2 col-t-offset-1 col-d-2">
+        <div class="logo" aria-labelledby="webcafe-heading">
+          <!-- Connect h1#webcafe-heading using aria-labelledby -->
+          <h1 id="webcafe-heading">웹카페</h1>
+          <picture>
+            <source srcset="assets/img/logo_m.svg" media="(max-width: 767px)">
+            <source srcset="assets/img/logo_l.svg" media="(min-width: 768px)">
+            <img src="assets/img/logo.png" alt="webcafe_logo" class="responsive-svg">
+          </picture>
+        </div>
+      </div>
+      <div class="col col-m-2 col-m-offset-1 col-t-4 col-t-offset-1 col-d-4 col-d-push-6">
+        <div class="info-menu" role="group">
+          <ul>
+            <li><a href="#" class="signin">로그인</a></li>
+            <li><a href="#" class="signup">회원가입</a></li>
+            <li><a href="#" class="cafe">네이버 카페</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col col-m-4 col-d-4 col-d-pull-2">
+        <div class="search">
+          <form id="search-form" action="javascript:alert('검색이 완료되었습니다.')" role="search">
+            <fieldset>
+              <legend>검색 폼</legend>
+              <input type="search" id="search-keyword" aria-label="검색어 입력상자" required placeholder="검색어를 입력하세요">
+              <button type="submit" class="btn-search">검색</button>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container navigation" role="navigation">
+    <div class="row">
+      <div aria-label="메인 메뉴">
+        <ul class="col col-d-8 col-d-offset-2">
+          <li class="col col-m-2 col-t-2 col-t-offset-1 col-d-2">
+            <a href="#">html5</a>
+          </li>
+          <li class="col col-m-2 col-t-2 col-d-2">
+            <a href="#">css3</a>
+          </li>
+          <li class="col col-m-2 col-t-2 col-d-2">
+            <a href="#">웹표준</a>
+          </li>
+          <li class="col col-m-2 col-t-2 col-t-offset-1 col-d-2">
+            <a href="#">웹접근성</a>
+          </li>
+          <li class="col col-m-2 col-t-2 col-d-2">
+            <a href="#">QnA</a>
+          </li>
+          <li class="col col-m-2 col-t-2 col-d-2">
+            <a href="#">자료실</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="container main-content">
+    <div class="row" role="main">
+      <div class="col">
+        <div class="rwd-intro" aria-label="반응형 이미지">
+          <picture>
+            <source srcset="assets/img/rwd_mobile.png" media="(max-width: 767px)">
+            <source srcset="assets/img/rwd_tablet.png" media="(min-width: 768px) and (max-width: 899px)">
+            <source srcset="assets/img/rwd_desktop.png" media="(min-width: 900px)">
+            <img src="assets/img/rwd_desktop.png" alt="Responsive Image" class="responsive-img">
+          </picture>
+        </div>
+      </div>
+      <div class="col col-d-4">
+        <div class="book" role="article" aria-labelledby="recommend-book">
+          <div class="col col-t-2 col-t-push-6">
+            <h2 id="recommend-book" class="book-heading">웹카페 추천 서적</h2>
+            <figure>
+              <img class="responsive-img" src="assets/img/rwd_book.jpg" alt="반응형 웹디자인 핵심 가이드북" title="책에대한 상세 설명은 하단 내용 참조">
+              <div class="book-maker">
+                반응형 웹디자인 핵심가이드북
+                <dl>
+                  <dt>저자</dt>
+                  <dd>김데레사 / </dd>
+                  <dt>디자인</dt>
+                  <dd>김기범</dd>
+                </dl>
+                <h3 class="book-grade">평점</h3>
+                <div class="grade">★★★★★</div>
+              </div>
+            </figure>
+          </div>
+          <div class="col col-t-6 col-t-pull-2">
+            <p class="book-report">반응형 웹(Responsive Web)이란 하나의 웹사이트에서 PC, 스마트폰, 태블릿 등 접속하는 디스플레이의 종류에 따라 화면의 크기가 자동으로 변하도록 만든 웹 페이지를 말한다.</p>
+            <p class="book-report">웹사이트를 PC용과 모바일용으로 각각 별개로 제작하지 않고, 하나의 공용 웹사이트를 만들어 다양한 디바이스에 대응할 수 있다. PC용 URL과 모바일용 URL이 동일하기 때문에 검색 포털 등 광고를 통한 사용자 접속을 효율적으로 관리할 수 있다.</p>
+            <p class="book-report">또한 웹 페이지 내용을 수정할 경우, 하나의 페이지만 수정하면 PC와 모바일 등 다양한 디바이스에서 동일하게 반영된다. 반응형 웹의 핵심 기술은 가변 그리드(fluid grid), 유연한 이미지(flexible images), 미디어 쿼리(media query)이다.</p>
+            <p class="book-report">이 책은 저자의 오랜 강의 경험을 토대로 반응형 웹을 체계적으로 학습할 수 있는 방법을 제시한 책이다. 미디어쿼리의 기본적인 이해를 시작으로 실전 예제를 통해 반응형 웹 디자인의 노하우를 학습할 수 있도록 구성된 책으로 실용서로 부족함이 없다.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col col-d-8">
+        <h2 class="qna-heading">묻고 답하기</h2>
+      </div>
+      <div class="col col-d-8">
+        <div class="news" role="region" aria-labelledby="webcafe-news">
+          <h2 id="webcafe-news" class="news-heading">웹카페 소식</h2>
+          <video class="responsive-svg" controls poster="assets/media/poster.jpg" preload="none" width="640" height="360">
+             <source src="assets/media/google-developer-stories.webm" type='video/webm; codecs="vp8, vorbis"'>
+             <track src="assets/media/video-subtitles-en.vtt" kind="captions" srclang="en" label="English captions" default>
+         </video>
+        </div>
+      </div>
+      <div class="col col-t-4 col-d-8">
+        <h2 class="popular-heading">인기 검색어</h2>
+      </div>
+      <div class="col col-t-4">
+        <h2 class="twitter-heading">웹카페 트위터</h2>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col col-d-6 col-d-push-3">주소</div>
+      <div class="col col-m-2 col-t-4 col-d-3 col-d-pull-6">정책</div>
+      <div class="col col-m-2 col-t-4 col-d-3">연락처</div>
+      <div class="col">저작권</div>
+    </div>
+  </div>
+</body>
+
+</html>

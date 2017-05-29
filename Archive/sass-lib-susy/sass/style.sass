@@ -1,0 +1,26 @@
+@import susy/susy
+@import yamoo9/yamoo9
+@import config
+
+$base-line-height: $base-font-size * 1.5
+
+body
+  @extend %reset-margin
+
+.page
+  +container
+  height: 100vh
+
+
+.box
+  +px-rem(height, 42px)
+  &.is-1
+    /*+span(isolate 1 at 9 of 12)*/
+    +bg-color(#333, 0.5)
+  &.is-2
+    /*+span(isolate 1 at 4 of 12)*/
+    +bg-color(#f00, 0.4)
+  &.is-3
+    +bg-color(#000, 0.3)
+    /*+span(3 of (1 2 3 2 2) at 2)*/
+    +gallery(3 of 12)

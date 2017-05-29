@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>border-box example</title>
+  <style>
+  .container1{
+    box-sizing: content-box;
+    background-color: blue;
+    width: 500px;
+    height: 450px;
+    padding: 20px;
+  }
+  .example1{
+    background-color: yellow;
+    height: 100%;
+    text-align: center;
+  }
+
+  .container2{
+    box-sizing: border-box;
+    background-color: blue;
+    width: 500px;
+    height: 450px;
+    padding: 20px;
+    margin-top: 20px;
+  }
+  .example2{
+    background-color: yellow;
+    height: 100%;
+    text-align: center;
+  }
+
+  </style>
+</head>
+<body>
+  <div class="container1">
+    <section class="example1">
+        content-box<br>
+        container width 200px + padding 20px<br>
+        Total 240px
+    </section>
+  </div>
+
+  <div class="container2">
+    <section class="example2">
+      <p>
+        border-box<br>
+        container width 200px and padding is within container2
+        total 200px
+      </p>
+    </section>
+  </div>
+</body>
+</html>

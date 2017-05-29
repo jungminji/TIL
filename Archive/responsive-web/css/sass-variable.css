@@ -1,0 +1,25 @@
+[class^="box"] {
+  font: 16px / 1.5 "Noto Sans KR";
+  width: 100px;
+  height: 100px;
+  background: #dc0068;
+  margin-right: 10px;
+  color: #fff;
+  border: 1px solid #000;
+  float: left;
+  line-height: 100px;
+  text-align: center; }
+
+.wrapper {
+  clear: both; }
+  .wrapper ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0; }
+  .wrapper li {
+    background: #A1E44D; }
+
+.container {
+  color: #D90368; }
+
+/*# sourceMappingURL=sass-variable.css.map */

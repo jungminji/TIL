@@ -1,0 +1,103 @@
+$size: 800px
+$background: #3185FC
+
+=clearfix
+  content: ""
+  display: block
+  clear: both
+
+body
+  background: #aaa
+  font-family: sans-serif
+  padding: 20px 0 40px 25px
+
+h1
+  margin: 35px 0 15px 0
+
+div
+  text-align: center
+  color: #fff
+  background: $background
+  line-height: $size*0.25
+  box-shadow: 0 0 1px 3px #aaa inset
+  transition: all .25s linear
+  &:hover
+    background: rgba(0,0,0,0.2) !important
+  &::before,
+  &::after
+    +clearfix
+
+.wrapper
+  width: $size
+  height: $size
+
+.area-right
+  float: right
+  width: $size*0.75
+  height: $size
+
+.area-one
+  float: right
+  width: $size*0.25
+  height: $size
+
+.area-two
+  float: right
+  width: $size*0.5
+  height: $size*0.5
+  div
+    float: left
+    width: $size*0.25
+
+.area-three
+  float: right
+  width: $size*0.5
+  height: $size*0.5
+  .area-three-right,
+  .area-three-left
+    float: right
+    width: $size*0.5
+    width: $size*0.25
+    div
+      width: $size*0.25
+
+.area-left
+  float: left
+  .area-four div
+    width: $size*0.25
+
+
+// Flex
+
+.flex-wrapper
+  width: $size
+  height: $size
+  display: flex
+  flex-direction: column
+  flex-wrap: wrap-reverse
+  div
+    background: $background
+    width: 25%
+    height: 25%
+    color: #fff
+    line-height: $size*0.25
+    @for $i from 1 through 16
+      &:nth-child(#{$i})
+        order: $i
+        background: darken($background, $i * 2.5%)
+    &:nth-child(5)
+      order: 9
+    &:nth-child(6)
+      order: 5
+    &:nth-child(7)
+      order: 10
+    &:nth-child(8)
+      order: 6
+    &:nth-child(9)
+      order: 7
+    &:nth-child(10)
+      order: 8
+    &:nth-child(11)
+      order: 11
+    &:nth-child(12)
+      order: 12

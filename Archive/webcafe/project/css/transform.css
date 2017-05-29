@@ -1,0 +1,94 @@
+html,
+body{
+  font-family: sans-serif;
+}
+
+.box{
+  background-color: red;
+  width: 200px;
+  height: 200px;
+  transition: all 0.5s linear;
+  transform-origin: left top;
+  margin-bottom: 50px;
+}
+.box:hover{
+  transform: scale(2);
+}
+
+
+
+.container{
+  background: silver;
+  width: 250px;
+  height: 250px;
+  position: relative;
+  perspective: 800px;
+}
+.card{
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform-style: preserve-3d;  /* Required for 3D layers */
+  transition: transform 1s;
+}
+.front,
+.back{
+  background: yellow;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  line-height: 250px;
+  font-size: 36px;
+  text-align: center;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  z-index: 2;
+}
+.back{
+  background-color: pink;
+  transform: rotateY(180deg);
+  /*backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;*/
+}
+.card:hover{
+  transform: rotateY(180deg);
+  transform: all 2s linear;
+}
+
+
+
+
+
+/*------*/
+.container2{
+  width: 250px;
+  height: 250px;
+  box-sizing: border-box;
+  margin-top: 50px;
+  perspective: 1000px;
+}
+.text-box{
+  background-color: blue;
+  width: 250px;
+  height: 250px;
+
+  animation: spin 2s infinite linear;
+}
+.text-box:hover{
+  animation-play-state: paused;
+}
+
+@keyframes spin{
+  from{
+    transform: rotateY(0deg);
+  }
+  to{
+    transform: rotateY(360deg);
+  }
+}
