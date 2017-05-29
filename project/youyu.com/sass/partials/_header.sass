@@ -109,30 +109,27 @@
 ////////////////////////////////////////////////////////////////////////////////
 .filter
   +break
-  position: relative
   @extend %clearfix
-  .filter-heading
-    height: heightCalc(2) - 2
-    margin-top: heightCalc() - 5
-    border-top: 2px solid #971a1d
-    background-color: #f0f0f0
-    text-align: center
-    font-weight: bold
-    color: #971a1d
-    cursor: pointer
-    background-color: yellow
-    &:before
-      content: 'asd'
-      height: 20%
-      background-color: blue
-    .btn-filter
-      width: 42px
-      height: 24px
-      border: none
-      background-color: transparent
-      background-image: $icon-url
-      background-position: 8px -107px
-      background-size: cover
-      background-repeat: no-repeat
+
+.filter-container
+  height: heightCalc(2)
+  background-color: #f0f0f0
+  border-top: 2px solid #971a1d
+  cursor: pointer
+  padding-top: 10px
+  box-sizing: border-box
+
+.filter-heading
+  float: left
+  font-weight: bold
+  color: #971a1d
+
+.icon-filter
+  float: left
+  display: block
+  width: 40px
+  height: 24px
+  margin-left: 43.5%
+  background: $icon-url 8px -107px / cover no-repeat
 
 ////////////////////////////////////////////////////////////////////////////////

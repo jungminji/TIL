@@ -37,9 +37,9 @@
           <fieldset>
             <legend class="sr-only">검색어를 입력하세요</legend>
             <h2 class="sr-only">검색어 입력 바</h2>
-            <label for="search" class="sr-only">검색</label>
             <div class="search-engine">
-              <input type="text" id="search" class="search-bar" placeholder="검색어를 입력하세요">
+              <label for="search-bar" class="sr-only" id="search">검색</label>
+              <input type="text" id="search-bar" aria-labelledby="search" class="search-bar" placeholder="검색어를 입력하세요">
               <button type="button" class="btn-search" tabindex="-1"></button>
             </div>
           </fieldset>
@@ -63,9 +63,12 @@
         </ul>
       </nav>
       <div class="filter">
-        <h2 class="filter-heading" tabindex="0">
-          필터를 설정하세요
-        </h2>
+        <div class="filter-container" tabindex="0">
+          <span class="icon-filter"></span>
+          <h2 class="filter-heading">
+            필터를 설정하세요
+          </h2>
+        </div>
       </div>
     </header>
     <!-- Header End -->
@@ -332,7 +335,7 @@
         <li class="link"><a href="#"><span>이용약관,개인정보</span></a></li>
       </ul>
       <div class="footer-contents">
-        <h2>하단 정보</h2>
+        <h2 class="sr-only">하단 정보</h2>
         <address class="address">
           <p>Company.  YOUYU        대표이사.  이정희        개인정보관리책임자.  이정희       사업자번호. 123-45-67890</p>
           <p>통신판매업신고. 2016-성남분당-1234        주소. 경기 성남시 분당구 판교역로 221 102호        대표번호. 1234-5678</p>
