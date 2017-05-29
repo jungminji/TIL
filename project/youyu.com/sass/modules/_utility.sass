@@ -32,6 +32,12 @@ a
   clip: rect(0,0,0,0)
   border: 0
 
+section > h2
+  +span(2)
+  margin-bottom: heightCalc()
+  font-size: 2.0rem
+  font-weight: bold
+
 ////////////////////////////////////////////////////////////////////////////////
 /// Functions
 
@@ -48,16 +54,6 @@ a
     content: ""
     display: block
     clear: both
-
-%sr-only
-  position: absolute
-  width: 1px
-  height: 1px
-  padding: 0
-  margin: -1px
-  overflow: hidden
-  clip: rect(0,0,0,0)
-  border: 0
 
 /// yamoo9 full center placeholder
 %center-box-block
@@ -86,10 +82,7 @@ a
   height: heightCalc(19)
   margin-top: heightCalc()
 
-%m-s-heading
-  +span(2)
-  margin-bottom: heightCalc()
-  font-size: 1.5rem
+
 
 %m-s-gallery-container
   +break

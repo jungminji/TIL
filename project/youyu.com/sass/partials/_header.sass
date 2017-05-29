@@ -81,13 +81,18 @@
 .navigation
   +break
   @extend %clearfix
+  height: heightCalc(3)
+  padding: heightCalc(2) 0 5px 0
+  box-sizing: border-box
+
+.main-menu
+  height: heightCalc()
 
 .menu-item
   +span(1)
   a
     @extend %center-box-block
     display: block
-    margin-top: heightCalc(2)
     color: #971a1d
     text-align: center
     font-weight: bold
@@ -110,14 +115,22 @@
 .filter
   +break
   @extend %clearfix
+  position: relative
+  margin-bottom: heightCalc(2)
 
 .filter-container
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
   height: heightCalc(2)
   background-color: #f0f0f0
   border-top: 2px solid #971a1d
   cursor: pointer
   padding-top: 10px
   box-sizing: border-box
+  &:hover
+    height: heightCalc(11)
 
 .filter-heading
   float: left
