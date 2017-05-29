@@ -21,11 +21,17 @@ body
 a
   text-decoration: none
   color: #000
-  &:focus
-    outline-color: #971a1d
 
-input
-  outline-color: #971a1d
+.sr-only
+  position: absolute
+  width: 1px
+  height: 1px
+  padding: 0
+  margin: -1px
+  overflow: hidden
+  clip: rect(0,0,0,0)
+  border: 0
+
 ////////////////////////////////////////////////////////////////////////////////
 /// Functions
 
@@ -114,7 +120,7 @@ input
   background: $i-forgot-icon-heart-grey 2px center / cover no-repeat
   background-size: 15px
   cursor: pointer
-  
+
 ////////////////////////////////////////////////////////////////////////////////
 /// Best seller and New item specific style mixin
 =bs-ni-styles($name)

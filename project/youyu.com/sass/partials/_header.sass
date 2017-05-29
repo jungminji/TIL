@@ -55,8 +55,6 @@
 .search
   +span(5 at 5 of 12 isolate)
   position: relative
-  legend, h2, label
-    @extend %sr-only
   .search-bar
     width: widthCalc(5)
     height: heightCalc(2) - 4
@@ -83,8 +81,6 @@
 .navigation
   +break
   @extend %clearfix
-  .nav-heading
-    @extend %sr-only
 
 .menu-item
   +span(1)
@@ -124,9 +120,11 @@
     font-weight: bold
     color: #971a1d
     cursor: pointer
+    background-color: yellow
     &:before
-      content: ''
+      content: 'asd'
       height: 20%
+      background-color: blue
     .btn-filter
       width: 42px
       height: 24px

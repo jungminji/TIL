@@ -13,6 +13,7 @@
   <div class="container">
     <!-- Header -->
     <header class="header">
+      <h2 class="sr-only">헤더 영역</h2>
       <!-- Brand logo -->
       <div class="brand">
         <a href="#">
@@ -31,21 +32,21 @@
           <a href="#" class="alarm">알람</a>
         </div>
       </div>
-      <div class="search">
+      <div class="search" role="search">
         <form action="#">
           <fieldset>
-            <legend>검색어를 입력하세요</legend>
-            <h2>검색어 입력 바</h2>
-            <label for="search">검색</label>
+            <legend class="sr-only">검색어를 입력하세요</legend>
+            <h2 class="sr-only">검색어 입력 바</h2>
+            <label for="search" class="sr-only">검색</label>
             <div class="search-engine">
               <input type="text" id="search" class="search-bar" placeholder="검색어를 입력하세요">
-              <button type="button" class="btn-search"></button>
+              <button type="button" class="btn-search" tabindex="-1"></button>
             </div>
           </fieldset>
         </form>
       </div>
       <nav class="navigation">
-        <h2 class="nav-heading">메인 네비게이션</h2>
+        <h2 class="sr-only">메인 네비게이션</h2>
         <ul class="main-menu">
           <li class="menu-item"><a href="#">main</a></li>
           <li class="menu-item"><a href="#">brand</a></li>
@@ -62,14 +63,17 @@
         </ul>
       </nav>
       <div class="filter">
-        <h2 class="filter-heading"><button type="button" class="btn-filter"></button>필터를 설정하세요</h2>
+        <h2 class="filter-heading" tabindex="0">
+          필터를 설정하세요
+        </h2>
       </div>
     </header>
     <!-- Header End -->
     <main class="main-contents">
+      <h2 class="sr-only">메인 영역</h2>
       <!-- Carousel -->
-      <section class="carousel" role="banner">
-        <h2 class="heading">Carousel</h2>
+      <section class="carousel" role="carousel">
+        <h2 class="sr-only">슬라이드 영역</h2>
         <div class="slide">
           <img src="assets/images/banner/banner-01.jpg" alt="slide-01">
         </div>
@@ -89,7 +93,7 @@
       <!-- Carousel End -->
       <!-- Best Sellers -->
       <section class="best-seller">
-        <h2 class="best-seller-heading">베스트셀러</h2>
+        <h2 class="sr-only">베스트셀러 영역</h2>
         <div class="best-seller-gallery">
           <div class="item">
             <a href="#">
@@ -132,7 +136,7 @@
       <!-- Best Sellers End -->
       <!-- Brands -->
       <section class="brands">
-        <h2 class="brands-heading">브랜드</h2>
+        <h2 class="sr-only">브랜드 영역</h2>
         <div class="brands-gallery">
           <div class="item">
             <img src="assets/images/brands/brand-01.jpg" alt="브랜드이미지1">
@@ -151,7 +155,7 @@
       <!-- Brand End -->
       <!-- New items -->
       <section class="new-items">
-        <h2 class="new-items-heading">신상품</h2>
+        <h2 class="sr-only">신상품 영역</h2>
         <div class="new-items-gallery">
           <div class="item">
             <a href="#">
@@ -194,7 +198,7 @@
       <!-- New items End -->
       <!-- Tips -->
       <section class="tips">
-        <h2 class="tips-heading">언니의 팁</h2>
+        <h2 class="sr-only">언니의 팁 영역</h2>
         <div class="tips-gallery">
           <div class="item">
             <a href="#">
@@ -216,7 +220,7 @@
       <!-- Tips End -->
       <!-- Best reviews -->
       <section class="best-review">
-        <h2 class="best-review-heading">베스트리뷰</h2>
+        <h2 class="sr-only">베스트리뷰 영역</h2>
         <div class="best-review-gallery">
           <div class="item">
             <a href="#">
@@ -320,7 +324,7 @@
     </main>
     <!-- Footer -->
     <footer class="footer">
-      <h2>하단 링크</h2>
+      <h2 class="sr-only">푸터 영역</h2>
       <ul class="footer-link">
         <li class="link"><a href="#"><span>YOUYU 소개</span></a></li>
         <li class="link"><a href="#"><span>통합배송</span></a></li>
