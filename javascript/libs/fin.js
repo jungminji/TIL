@@ -18,9 +18,9 @@
     }
 
     // Fin.prototype => methods
-    const Fin = Object.create(methods);
+    const Bottle = Object.create(methods);
 
     // Add Fin to window object
-    window.Fin = Fin;
+    window._ = Bottle;
 
 })();
