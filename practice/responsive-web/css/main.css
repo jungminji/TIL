@@ -1,0 +1,53 @@
+.col {
+  float: left;
+  width: 100%;
+  min-height: 50px;
+  margin-right: -100%; }
+
+.col-6 {
+  width: 50%; }
+
+.col-offset-6 {
+  margin-left: 50%; }
+
+body {
+  color: green;
+  background-color: yellow; }
+
+div {
+  border-radius: 50px; }
+
+.example, .extend-example {
+  border: 1px solid #aaa;
+  border-radius: 10px;
+  padding: 10px;
+  background: #eee; }
+
+.extend-example {
+  margin: 10px; }
+
+.simple-extend, .useing-extend {
+  border: 1px solid #aaa;
+  color: #f00; }
+
+.favorite {
+  width: 550px;
+  height: 100; }
+  .favorite::after {
+    content: "";
+    display: block;
+    clear: both; }
+
+.col-1 {
+  width: 100px; }
+
+.col-2 {
+  width: 200px; }
+
+.col-3 {
+  width: 300px; }
+
+.col-4 {
+  width: 400px; }
+
+/*# sourceMappingURL=main.css.map */

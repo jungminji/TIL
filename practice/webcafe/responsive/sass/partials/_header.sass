@@ -1,0 +1,45 @@
+$header-bg: #988574
+
+.header
+  background: $header-bg
+
+.logo
+  max-width: 70px
+  // Set .logo class max-width 100% on screen size 768px <
+  +media(t)
+    max-width: 100%
+  +media(d)
+    max-width: 100%
+
+#webcafe-heading
+  @extend %sr-only
+
+.info-menu ul
+  $btn-bg: #7d3016
+  li, a
+    display: inline-block
+  a
+    color: #fff
+    padding: 10px 15px
+    border-radius: 5px
+    background: $btn-bg
+    text-decoration: none
+
+#search-form
+  legend
+    @extend %sr-only
+  $btn-size: 30px
+  input
+    height: 35px
+    border-radius: 5px
+    margin: 0 5px
+    border: 1px solid #ccc
+    width: calc(100% - (#{$btn-size} + 15px))
+  button
+    border: 0
+    padding: 0 0 0 $btn-size
+    width: $btn-size
+    height: $btn-size
+    vertical-align: middle
+    overflow: hidden
+    background: url('../assets/img/btn_search.png') no-repeat 0 0/cover

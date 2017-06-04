@@ -1,0 +1,90 @@
+@charset "utf-8";
+body {
+  margin: 0;
+}
+
+.wrapper {
+  font-family: sans-serif;
+  text-align: center;
+  max-width: 940px;
+  margin: 0 auto;
+  margin-top: 40px;
+  position: relative;
+}
+.wrapper::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: repeating-linear-gradient(to right, rgba(0,0,0,0.23) 0px, rgba(0,0,0,0.23) 60px, transparent 60px, transparent 80px);
+}
+.row::before,
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.col {
+  min-height: 50px;
+  line-height: 50px;
+  width: 100%;
+  background: #FFCB47;
+  margin-bottom: 15px;
+  float: left;
+  margin-right: -100%;
+}
+.row .col:first-child {
+  margin-left: 0;
+}
+.col-1 {
+  width: 60px;
+}
+.col-2 {
+  width: 140px;
+}
+.col-3 {
+  width: 220px;
+}
+.col-4 {
+  width: 300px;
+}
+.col-5 {
+  width: 380px;
+}
+.col-6 {
+  width: 460px;
+}
+.col-7 {
+  width: 540px;
+}
+.col-8 {
+  width: 620px;
+}
+.col-9 {
+  width: 700px;
+}
+.col-10 {
+  width: 780px;
+}
+.col-11 {
+  width: 860px;
+}
+.col-12 {
+  width: 940px;
+}
+
+/* Pull everyting to right, then margin-left to to set the position */
+.offset-11{
+  margin-left: 880px !important;
+}
+.offset-10{
+  margin-left: 800px !important;
+}
+.offset-8{
+  margin-left: 640px !important;
+}
+.offset-4{
+  margin-left: 320px !important;
+}
