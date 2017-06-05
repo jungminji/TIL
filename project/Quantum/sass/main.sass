@@ -1,0 +1,96 @@
+@import "modules/reset"
+@import "vendor/susy/_susy.scss"
+@import "vendor/susy/config"
+
+
+////////////////////////////////////////////////////////////////////////////////
+$base-line-height: 30px
+
+////////////////////////////////////////////////////////////////////////////////
+=alpha
+  margin-left: 0
+=omega
+  margin-right: 0
+
+////////////////////////////////////////////////////////////////////////////////
+
+@function cal-w($n:1)
+  @return 70px * $n
+
+@function cal-h($n:1)
+  @return $base-line-height * $n
+
+////////////////////////////////////////////////////////////////////////////////
+
+html
+  font-size: 10px
+
+body
+  font-family: 'Roboto', sans-serif
+
+.container
+  +container()
+
+////////////////////////////////////////////////////////////////////////////////
+
+header
+  +break
+  height: cal-h(3)
+  box-sizing: border-box
+  border: 1px solid green
+
+.brand
+  +span(2)
+
+nav
+  +span(4)
+
+form
+  +span(3)
+
+.user-menu
+  +span(3)
+  +omega
+
+////////////////////////////////////////////////////////////////////////////////
+
+.path
+  +break
+  height: cal-h()
+  margin-top: cal-h(3)
+  box-sizing: border-box
+  border: 1px solid aqua
+
+////////////////////////////////////////////////////////////////////////////////
+
+.mailbox-header
+  +break
+  height: cal-h(2)
+  margin-top: cal-h()
+  box-sizing: border-box
+  border: 1px solid brown
+
+////////////////////////////////////////////////////////////////////////////////
+
+.mailbox
+  margin-top: cal-h()
+  border: 1px solid pink
+  box-sizing: border-box
+  width: 100%
+  tr
+    box-sizing: border-box
+    border: 1px solid green
+    td, th
+      height: cal-h()
+      box-sizing: border-box
+      border: 1px solid red
+
+
+.col-1
+  width: 225px
+.col-2
+  width: 380px
+.col-3
+  width: 250px
+.col-4
+  width: 285px

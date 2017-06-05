@@ -1,0 +1,15 @@
+{
+  "name": "quantum",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass-build": "node-sass --source-map true --output-style compressed sass/ -o css/",
+    "sass-watch": "node-sass --watch --source-map true --output-style compressed sass/ -o css/"
+  },
+  "devDependencies": {
+    "node-sass": "^4.5.3"
+  },
+  "author": "Jungmin Ji",
+  "license": "ISC"
+}
