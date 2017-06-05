@@ -12,6 +12,16 @@ $base-line-height: 30px
 =omega
   margin-right: 0
 
+%sr-only
+  position: absolute
+  width: 1px
+  height: 1px
+  padding: 0
+  margin: -1px
+  overflow: hidden
+  clip: rect(0,0,0,0)
+  border: 0
+
 ////////////////////////////////////////////////////////////////////////////////
 
 @function cal-w($n:1)
@@ -27,6 +37,13 @@ html
 
 body
   font-family: 'Roboto', sans-serif
+  color: #666
+
+a
+  text-decoration: none
+  color: #b3b3b3
+  &:hover, &:active
+    color: #666
 
 .container
   +container()
@@ -36,17 +53,38 @@ body
 header
   +break
   height: cal-h(3)
+  padding-top: cal-h()
   box-sizing: border-box
   border: 1px solid green
 
 .brand
   +span(2)
+  font-size: 2rem
+  text-transform: uppercase
+  & > h2
+    line-height: cal-h()
 
 nav
   +span(4)
+  .main-menu
+    +span(100% no-gutter)
+    margin-left: -30px
+    & > li
+      float: left
+      margin-right: 35px
+      font-size: 1.4rem
+      & > a
+        display: block
+        line-height: cal-h()
 
 form
   +span(3)
+  & > label
+    @extend %sr-only
+  & > input
+    height: cal-h(1.25)
+    margin-top: cal-h(-0.25)
+    border-radius: 20px
 
 .user-menu
   +span(3)
@@ -85,6 +123,20 @@ form
       box-sizing: border-box
       border: 1px solid red
 
+td
+  input, span, a, p, time
+    display: block
+    float: left
+    height: cal-h(2)
+    line-height: cal-h(2)
+    background-color: yellow
+    margin: 0
+  input
+    margin-left: 15px
+  a, p, time
+    font-size: 1.2rem
+  &.unread
+    font-weight: bold
 
 .col-1
   width: 225px
