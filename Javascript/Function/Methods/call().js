@@ -26,3 +26,18 @@ Deux.sayHi.call(Un, " Bonjour!");
 
 // See the difference
 Deux.sayHi(" Hola!");
+
+
+
+const Fan = {
+  name: 'Small Fan',
+  on: function(power){
+    console.log('this:', this);
+    power = power || 1;
+    console.log(this.name + ' is ON! ' + power + ' strong...');
+  },
+  off: function(){
+    console.log('this:', this);
+    console.log(this.name + ' is OFF! ');
+  }
+}

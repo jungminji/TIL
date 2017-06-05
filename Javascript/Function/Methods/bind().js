@@ -1,3 +1,5 @@
+// bind() was released in 2009, ES5(IE9+)
+
 // Attach Deux to window(global) object
 this.Deux = 10;
 
@@ -20,3 +22,8 @@ retrieveDeux();
 // Create new function variable and bind to "module"
 var bindsuchAction = retrieveDeux.bind(module);
 bindsuchAction(); // returns 70
+
+
+// call(), apply() invokes immediately, but bind() doesn't.
+
+// You can preserve the function and also change 'this'. then, you can use it later
