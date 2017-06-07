@@ -1,5 +1,5 @@
-// IIFE get window object when it invoked
-(function(window) {
+// IIFE get window object when invoked
+(function(global) {
   "use strict"
 
   function Bottle() {
@@ -86,8 +86,8 @@
       },
 
       // Etc
-      factorial(n){
-        if(n === 1){
+      factorial(n) {
+        if (n === 1) {
           return 1;
         }
         return n * this.factorial(--n);
@@ -104,7 +104,7 @@
     return methods;
   }
 
-  // Assign Bottle instance to window, invoke with a keyword 'Ein'
-  window.Ein = new Bottle();
+  // Assign Bottle instance to window, invoke with a keyword 'fe'
+  global._ = new Bottle();
 
-})(window);
+})(window); // Passing window object
