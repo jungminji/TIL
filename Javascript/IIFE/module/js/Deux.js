@@ -1,4 +1,3 @@
-// Namespace pattern
 (function() {
   var module = ["Deux"];
 

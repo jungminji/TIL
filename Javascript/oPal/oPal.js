@@ -1,13 +1,23 @@
-// IIFE get window object when invoked
 (function(global) {
-  "use strict"
+  "use strict";
 
-  function Bottle() {
+  // Closure: EinLib
+  const oPal = function() {
 
-    const methods = {
+    // constructor
+    const oPalMine = function() {
+      this.author = "Jungmin Ji";
+      this.version = "0.0.5";
+      this.name = "oPal";
+      this.repository = "https://github.com/jungminji/";
+      this.license = "MIT";
+    }
+
+    // Add methods into prototype
+    oPalMine.prototype = {
 
       // Mathmatics
-      getSum() {
+      getSum: function() {
         this.isArgsEmpty(arguments);
         let sum = 0;
         for (let item of arguments) {
@@ -18,11 +28,11 @@
         }
         return sum;
       },
-      getAvg() {
+      getAvg: function() {
         this.isArgsEmpty(arguments);
         return this.getSum.apply(this, arguments) / arguments.length;
       },
-      getMax() {
+      getMax: function() {
         this.isArgsEmpty(arguments);
         let max = arguments[0];
         for (let item of arguments) {
@@ -33,7 +43,7 @@
         }
         return max;
       },
-      getRand(min, max) {
+      getRand: function(min, max) {
         let num = 0;
         if (this.isType(min) === "undefined") {
           throw ": At least one parameter value is required";
@@ -45,66 +55,73 @@
           num = Math.floor(Math.random() * min + 1) :
           num = Math.floor(Math.random() * ((max + 1) - min) + min);
       },
+      getFactorial: function(n) {
+        if (n === 1) {
+          return 1;
+        }
+        return n * this.getFactorial(--n);
+
+        // if factorial(4)
+        // 4 * factorial(3)
+        //         3 * factorial(2)
+        //                 2 * factorial(1)
+        //                         1
+        // Therefore, 4 * 3 * 2 * 1 = 24
+      },
 
       // Validations
-      isArgsEmpty(arg) {
+      isArgsEmpty: function(arg) {
         if (!arg.length) {
           throw "At least one parameter is required";
         }
       },
-      isType(data) {
+      isType: function(data) {
         return Object.prototype.toString.call(data).slice(8, -1).toLowerCase();
       },
-      isValidType(data, type) {
+      isValidType: function(data, type) {
         if (this.isType(type) !== 'string') {
           throw ': Invalid parameter type on argument 2\nMust present data type';
         }
         return this.isType(data) === type;
       },
-      isNumber(data) {
+      isNumber: function(data) {
         return this.isValidType(data, "number") ? true : false;
       },
-      isString(data) {
+      isString: function(data) {
         return this.isValidType(data, "string") ? true : false;
       },
-      isBoolean(data) {
+      isBoolean: function(data) {
         return this.isValidType(data, "boolean") ? true : false;
       },
-      isFunction(data) {
+      isFunction: function(data) {
         return this.isValidType(data, "function") ? true : false;
       },
-      isArray(data) {
+      isArray: function(data) {
         return this.isValidType(data, "array") ? true : false;
       },
-      isObject(data) {
+      isObject: function(data) {
         return this.isValidType(data, "object") ? true : false;
       },
 
       // Utilities
-      toArray() {
+      toArray: function() {
         return Array.prototype.slice.call(arguments);
-      },
-
-      // Etc
-      factorial(n) {
-        if (n === 1) {
-          return 1;
-        }
-        return n * this.factorial(--n);
       }
-      // if factorial(4)
-      // 4 * factorial(3)
-      //         3 * factorial(2)
-      //                 2 * factorial(1)
-      //                         1
-      // Therefore, 4 * 3 * 2 * 1 = 24
     }
 
-    // return a package of methods to use
-    return methods;
+    // Returns oPal instance to const oPal
+    function oPalFind() {
+      return new oPalMine();
+    }
+
+    // Returns oPalFind function statement to const oPal
+    return oPalFind;
   }
 
-  // Assign Bottle instance to window, invoke with a keyword 'fe'
-  global._ = new Bottle();
+  // forge has createEin function statement
+  const oPalCraft = oPal();
 
-})(window); // Passing window object
+  // forging to new instance of object, and add to window object
+  global.o = oPalCraft();
+
+}(window));
