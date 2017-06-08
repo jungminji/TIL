@@ -5,6 +5,28 @@
 ////////////////////////////////////////////////////////////////////////////////
 $base-line-height: 30px
 
+
+////////////////////////////////////////////////////////////////////////////////
+.dev-controls
+  position: absolute
+  top: 0
+  left: 0
+  width: 200px;
+  text-align: center
+  h3
+    font-size: 1.6rem
+    line-height: 30px
+    font-weight: bold
+  p
+    font-size: 1.3rem
+    font-weight: bold
+    line-height: 30px
+
+.draw-border
+  border: 1px solid #555
+.body-pad-bot
+  padding-bottom: 150px
+
 ////////////////////////////////////////////////////////////////////////////////
 =alpha
   margin-left: 0
@@ -54,7 +76,6 @@ header
   height: cal-h(3)
   padding-top: cal-h()
   box-sizing: border-box
-  border: 1px solid green
 
 .brand
   +span(2)
@@ -84,7 +105,7 @@ form
   & > input
     height: cal-h(1.25)
     margin-top: cal-h(-0.25)
-    border-radius: 20px
+    border-radius: 25px
     border: 1px solid rgba(245, 245, 245, 1)
 
 .user-menu
@@ -98,7 +119,6 @@ form
   height: cal-h()
   margin-top: cal-h(3)
   box-sizing: border-box
-  border: 1px solid aqua
   & > span
     display: block
     float: left
@@ -124,16 +144,13 @@ form
 
 .mailbox
   margin-top: cal-h()
-  border: 1px solid pink
-  box-sizing: border-box
   width: 100%
+  box-sizing: border-box
   tr
     box-sizing: border-box
-    border: 1px solid green
     td, th
-      height: cal-h()
       box-sizing: border-box
-      border: 1px solid red
+      height: cal-h()
 
 .compose
   width: 183px
@@ -162,6 +179,8 @@ td
     font-size: 1.2rem
   &.unread
     font-weight: bold
+  time, .attached
+    float: right
 
 .col-1
   width: 225px
@@ -171,3 +190,11 @@ td
   width: 250px
 .col-4
   width: 285px
+
+
+////////////////////////////////////////////////////////////////////////////////
+.mailbox-left-menu
+  ul > li
+    font-size: 1.3rem
+    font-weight: 500
+    line-height: cal-h(1.5)
