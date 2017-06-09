@@ -15,15 +15,31 @@
 </head>
 
 <body>
-  <h1>You are Learning javascript</h1>
+  <ul id="products">
+    <li class="product-item"><a href="#">phone</a></li>
+    <li class="product-item"><a href="#">bag</a></li>
+    <li class="product-item"><a href="#">hat</a></li>
+    <li class="product-item"><a href="#">car</a></li>
+    <li class="product-item"><a href="#">book</a></li>
+  </ul>
+  <script>
+    (function(global, document) {
+      'use strict';
+      var product = document.getElementById('products');
+      var items = product.getElementsByTagName("li");
+      var changeLinkColor = function(){
+        this.style.color = 'lightblue';
+      }
 
-  <!-- <script src="Function/Methods/apply().js"></script> -->
-  <!-- <script src="Function/Methods/bind().js"></script> -->
-  <!-- <script src="Function/Methods/call().js"></script> -->
-  <!-- <script src="Closures/closure.js"></script> -->
-  <!-- <script src="Object/Methods/create().js"></script> -->
-  <script src="_/_validation.js"></script>
-  <script src="_/_math.js"></script>
+      for( var i=0 ; i<items.length; i++){
+        var item = items.item(i);
+        var link = item.getElementsByTagName('a')[0];  // a is in array, so select index 0 to return actual value
+        link.onfocus = changeLinkColor;
+      }
+
+
+    }(window, window.document));
+  </script>
 </body>
 
 </html>
