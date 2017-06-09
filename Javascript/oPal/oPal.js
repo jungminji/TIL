@@ -1,7 +1,7 @@
 (function(global) {
   "use strict";
 
-  // Closure: EinLib
+  // Closure: oPal
   const oPal = function() {
 
     // constructor
@@ -13,7 +13,7 @@
       this.license = "MIT";
     }
 
-    // Add methods into prototype
+    // Add methods to prototype
     oPalMine.prototype = {
 
       // Mathmatics
