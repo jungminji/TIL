@@ -9,6 +9,8 @@
       this.name = "oPal";
       this.repository = "https://github.com/jungminji/";
       this.license = "MIT";
+
+      this.doc = global.document;
     }
 
     // Mathmatics
@@ -105,22 +107,47 @@
 
     // BOM utility
     getHashValue() {
-        let hash = location.hash;
+      let hash = location.hash;
 
-        if (this.isType(hash) === 'undefined') {
-          throw "location.hash is undefined";
-        }
-        // location.hash = "#newitem=3&value=3313123";
-        let un = hash.split('&');
-        let deux = un[1].split('=');
+      if (this.isType(hash) === 'undefined') {
+        throw "location.hash is undefined";
+      }
 
-        return deux[1];
+      let un = hash.split('&');
+      let deux = un[1].split('=');
+
+      return deux[1];
+    }
+    getPlatform() {
+      return navigator.platform;
+    }
+
+    // DOM utility
+    getNode(node, context){
+      if(node[0] === "."){
+        // Class
       }
-      getPlatform() {
-        return navigator.platform;
+      else if(node[0] === "#"){
+        this._getId(node);
+      } else {
+        this._getTags(node, context);
       }
+    }
+    _getId(node){
+      return this.doc.getElementById(node);
+    }
+    _getTagFirst(node, context){
+      return this._getTags(node, context)[0];
+    }
+    _getTags(node, context){
+      return (context || this.doc).getElementsByTagName(node);
+    }
+    _getClass(node){
+
+    }
+
   }
 
-  global.o = new oPal();
+  global.$ = new oPal();
 
 }(window));

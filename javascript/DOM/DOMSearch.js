@@ -19,7 +19,7 @@
   console.log('Prev sibling: ', headline.nextSibling);
 
   var headling_childs = headline.childNodes;
-  console.log(headling_childs);
+  console.log('Child nodes: ' + headline.childNodes);
 
   // Node Types
   // elements node = 1
@@ -34,5 +34,12 @@
     collection.push(children);
   }
   console.log(collection);
+
+  console.log('----------');
+
+  var list = doc.getElementById('list');
+
+  console.log(list.childNodes);
+  console.log(list.children);
 
 }(window));
