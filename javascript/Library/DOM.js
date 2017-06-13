@@ -8,6 +8,17 @@
       this.currentNode = "";
     }
 
+    node(node, type = this.nodeType){
+
+      let type = this.nodeType(node);
+
+      return this;
+    }
+
+    nodeType(node){
+
+    }
+
     idNode(node, context = this.doc) {
       return this.currentNode = context.getElementById(node);
     }
