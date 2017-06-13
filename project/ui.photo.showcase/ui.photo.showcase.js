@@ -35,12 +35,15 @@
   // Prevent default behavior of a links
   // And loading image before downloading actual image
   (function() {
+    // querySelector works IE8+
     let thumbnailLinks = doc.querySelectorAll('.photo-showcase-thumbnail');
 
     function blockDefaultEvent(e) {
 
       let newPath = '';
 
+      // currentSrc doesn't support IE. (require polyfill)
+      // Loop through showcase path to find the matching index to retrieve thumbnail path
       for (let i = 0; i < showcase.path.length; i++) {
         let index = showcase.path[i].split('=')[1];
         if (e.target.currentSrc.split('=')[1] === index) {
@@ -52,6 +55,7 @@
       let showcaseImg = doc.querySelector('.photo-showcase img');
       let downloadImg = new Image();
 
+      // .src browser support unknown except Chrome
       showcaseImg.src = "loading.svg";
       downloadImg.onload = function() {
         showcaseImg.src = downloadImg.src;
