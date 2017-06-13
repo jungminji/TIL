@@ -1,0 +1,50 @@
+html {
+  overflow-y: visible;
+  font-size: 10px; }
+
+body {
+  margin: 0;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  font-family: "Helvetica Neue", Helvetica, Arial, Verdana, sans-serif;
+  background: #fff;
+  color: #000; }
+
+.demo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #999; }
+
+.photo-showcase-container {
+  width: 900px;
+  height: 420px;
+  background: #777; }
+  .photo-showcase-container .photo-showcase {
+    position: relative;
+    height: 100%; }
+    .photo-showcase-container .photo-showcase > img {
+      position: absolute;
+      margin: auto;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0; }
+
+.photo-showcase-controller {
+  width: 900px; }
+  .photo-showcase-controller ul {
+    list-style: none;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0; }
+    .photo-showcase-controller ul li {
+      float: left;
+      transition: all 0.2s linear; }
+      .photo-showcase-controller ul li:hover {
+        opacity: 0.5; }
+  .photo-showcase-controller img {
+    vertical-align: middle; }
+
+/*# sourceMappingURL=ui.photo.showcase.css.map */
