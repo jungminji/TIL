@@ -18,8 +18,13 @@
   // Storing path into showcase, thumbnail object
   (function() {
     for (let i = 0; i < showcase.number; i++) {
+
       showcase.path.push('https://unsplash.it/' + showcase.width + '/' + showcase.height + '?image=' + i);
       thumbnail.path.push('https://unsplash.it/' + thumbnail.width + '/' + thumbnail.height + '?image=' + i);
+
+      showcase.alt.push('https://unsplash.it/' + showcase.width + '/' + showcase.height + '?image=' + i);
+      thumbnail.alt.push('https://unsplash.it/' + thumbnail.width + '/' + thumbnail.height + '?image=' + i);
+
     }
   }());
 
@@ -27,9 +32,9 @@
   (function() {
 
     let thumbnailList = doc.querySelector('#showcase-thumbnail');
-    
+
     for (let i = 0; i < showcase.number; i++) {
-      thumbnailList.innerHTML += '<li role="presentation"><a href="" class="photo-showcase-thumbnail" role="tab"><img src="https://unsplash.it/100/100?image=' + i + '" alt=""></a></li>';
+      thumbnailList.innerHTML += '<li role="presentation"><a href="" class="photo-showcase-thumbnail" role="tab"><img src="https://unsplash.it/100/100?image=' + i + '" alt="' + thumbnail.alt[i] + '"></a></li>';
     }
   }());
 
