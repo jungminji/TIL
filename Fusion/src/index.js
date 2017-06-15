@@ -1,17 +1,7 @@
-var message = require('./message');
-
-import Button from './button';
-
-console.log(Button);
-
-// var newMessage = () => (`<p>${message.hi} ${message.event}</p>`);
-var newMessage = () => (Button.button);
-
-
-var app = document.getElementById('app');
-app.innerHTML = newMessage();
-
-Button.attachEl();
+const fusion = require('./fusion');
+const validation = require('./fusion.validation');
+const math = require('./fusion.math');
+const DOM = require('./fusion.DOM');
 
 if (module.hot) {
   module.hot.accept();

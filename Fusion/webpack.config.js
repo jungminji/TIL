@@ -1,9 +1,10 @@
-var path = require('path');
-var webpack = require('webpack');
+var path = require('path'); // to use as a path on output
+var webpack = require('webpack'); // To load hot module plugin
 
 var DEVELOPMENT = process.env.NODE_ENV === 'development';
 var PRODUCTION = process.env.NODE_ENV === 'production';
 
+// entry for production and development
 var entry = PRODUCTION
   ? ['./src/index.js']
   : ['./src/index.js', 'webpack/hot/dev-server', 'webpack-dev-server/client?http://localhost:8080'];
