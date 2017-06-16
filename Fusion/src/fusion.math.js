@@ -1,9 +1,6 @@
-// Validation methods
-module.exports = (function() {
+const fusionMath = {
 
-  const M = $;
-
-  M.sum = function() {
+   sum: function(){
 
     M.isArgsEmpty(arguments);
     let sum = 0;
@@ -14,14 +11,14 @@ module.exports = (function() {
       sum += item;
     }
     return sum;
-  }
+  },
 
-  M.avg = function() {
+  avg: function() {
     M.isArgsEmpty(arguments);
     return M.sum.apply(M, arguments) / arguments.length;
-  }
+  },
 
-  M.max = function() {
+  max: function() {
     M.isArgsEmpty(arguments);
     let max = arguments[0];
     for (let item of arguments) {
@@ -33,9 +30,9 @@ module.exports = (function() {
         : false;
     }
     return max;
-  }
+  },
 
-  M.rand = function(min, max) {
+  rand: function(min, max) {
     let num = 0;
 
     if (M.type(min) === "undefined") {
@@ -51,13 +48,14 @@ module.exports = (function() {
     return M.type(max) === "undefined"
       ? num = Math.floor(Math.random() * min + 1)
       : num = Math.floor(Math.random() * ((max + 1) - min) + min);
-  }
+  },
 
-  M.factorial = function(n) {
+  factorial: function(n) {
     if (n === 1) {
       return 1;
     }
     return n * M.factorial(--n);
   }
 
-}());
+
+};

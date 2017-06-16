@@ -1,11 +1,3 @@
-module.exports = (function(global) {
+const Fusion = Object.create(fusionMath);
 
-  class Fusion {
-    constructor(window) {
-      this.doc = window.document;
-    }
-  }
-
-  global.$ = new Fusion(window);
-
-}(window));
+export default Fusion;

@@ -69,11 +69,11 @@
       downloadImg.src = newPath;
 
       return false;
-    }
+    };
 
     for (let i = 0; i < showcase.number; i++) {
       thumbnailLinks.item(i).onclick = blockDefaultEvent;
     }
   }());
-
+  
 }(window));
