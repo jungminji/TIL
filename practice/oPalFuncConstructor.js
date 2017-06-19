@@ -1,7 +1,6 @@
 (function(global) {
   "use strict";
 
-  // Closure: oPal
   const oPal = function() {
 
     // constructor
@@ -15,7 +14,6 @@
 
     // Add methods to prototype
     oPalMine.prototype = {
-
       // Mathmatics
       getSum: function() {
         this.isArgsEmpty(arguments);
