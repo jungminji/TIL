@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    li {
+      line-height: 35px;
+    }
+
+    li:hover {
+      background: yellow;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <section class="a">
+      <h1>Section A</h1>
+      <ul>
+        <li>content C</li>
+        <li>content A</li>
+        <li>content B</li>
+        <li>content D</li>
+      </ul>
+    </section>
+    <section class="b">
+      <h1>Section B</h1>
+      <ul>
+        <li>item A</li>
+        <li>item B</li>
+        <li>item C</li>
+        <li>item D</li>
+      </ul>
+    </section>
+  </div>
+  <script>
+
+    function bindEvents() {
+      var listA = document.querySelector('.a > ul');
+      // var itemsA = document.querySelectorAll('.a > ul li');
+      var listB = document.querySelector('.b > ul');
+      // var itemsB = document.querySelector('.b > ul li');
+
+      for (var i = 0; i < listA.children.length; i++) {
+        listA.children[i].onclick = replaceListItem.bind(listA.children[i], listA);
+        listB.children[i].onclick = replaceListItem.bind(listB.children[i], listB);
+      }
+    }
+
+    function replaceListItem(listA, listB){
+      var toggle = false;
+      (function(a, b){
+
+        toggle = toggle ? false : true;
+
+        console.log(toggle);
+      }(listA, listB));
+    }
+    bindEvents();
+  </script>
+</body>
+
+</html>
