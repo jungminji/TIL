@@ -346,7 +346,7 @@ var FDS = function(global) {
   };
 
   var clone = function(node, deep) {
-
+  //node has event attached in our case
     validateElementNode(node);
     validateError(deep, '!boolean');
 
@@ -361,25 +361,31 @@ var FDS = function(global) {
     return node.cloneNode(true);
   }
 
+  var forEachFn = function() {
+    if (Array.prototype.forEach) {
+      return function(o, callback) {
+        o.forEach(callback);
+      }
+    } else {
+      return function(o, callback) {
+        for (var i = 0, item; i < o.length; i++) {
+          item = o[i];
+        }
+      }
+    }
+  }();
+
   var foreach = function(o, callback) {
 
     validateError(callback, '!function');
 
-    if (isArray(o) || type(o) === 'nodelist') {
-      // IE 8-
-      if (!Array.prototype.forEach) {
-        for (var i = 0, item; i < o.length; i++) {
-          item = o[i];
-          callback.call(o, item, i, o);
-        }
-      } else {
-        // IE 9+
-        Array.prototype.forEach.call(o, callback);
-      }
-    }
+    // forEachFn(o, callback);
 
-    if (isObject(o)) {
-      Array.prototype.forEach.call(o, callback);
+    for (var prop in o) {
+      if (o.hasOwnProperty(prop)) {
+        var value = o[prop];
+        callback(prop, value, o);
+      }
     }
   }
 
