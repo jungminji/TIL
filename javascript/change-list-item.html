@@ -22,45 +22,55 @@
     <section class="a">
       <h1>Section A</h1>
       <ul>
-        <li>content C</li>
-        <li>content A</li>
-        <li>content B</li>
-        <li>content D</li>
+        <li>Zealot</li>
+        <li>Stalker</li>
+        <li>Shuttle</li>
+        <li>Pylon</li>
       </ul>
     </section>
     <section class="b">
       <h1>Section B</h1>
       <ul>
-        <li>item A</li>
-        <li>item B</li>
-        <li>item C</li>
-        <li>item D</li>
+        <li>Zergling</li>
+        <li>Hydralisk</li>
+        <li>Mutalisk</li>
+        <li>Ultralisk</li>
       </ul>
     </section>
   </div>
   <script>
+    let trans = false;
+    let buffer = '';
+
+    function action(){
+
+      if(!trans){
+        this.style.background = "red";
+        trans = !trans;
+
+        buffer = this.cloneNode(true);
+        console.log(buffer);
+
+      } else {
+        this.style.background = "blue";
+      }
+
+    }
+
 
     function bindEvents() {
-      var listA = document.querySelector('.a > ul');
-      // var itemsA = document.querySelectorAll('.a > ul li');
-      var listB = document.querySelector('.b > ul');
-      // var itemsB = document.querySelector('.b > ul li');
+      var listA = document.querySelectorAll('.a > ul li');
+      var listB = document.querySelectorAll('.b > ul li');
 
-      for (var i = 0; i < listA.children.length; i++) {
-        listA.children[i].onclick = replaceListItem.bind(listA.children[i], listA);
-        listB.children[i].onclick = replaceListItem.bind(listB.children[i], listB);
+      for(var i=0 ; i<listA.length; i++){
+        listA[i].onclick = action.bind(listA[i]);
+      }
+      for(var i=0 ; i<listB.length; i++){
+        listB[i].onclick = action.bind(listB[i]);
       }
     }
 
-    function replaceListItem(listA, listB){
-      var toggle = false;
-      (function(a, b){
 
-        toggle = toggle ? false : true;
-
-        console.log(toggle);
-      }(listA, listB));
-    }
     bindEvents();
   </script>
 </body>
