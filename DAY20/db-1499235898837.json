@@ -115,13 +115,13 @@
     {
       "id": 7,
       "name": "배진호",
-      "gender": "female",
-      "age": 22,
+      "gender": "male",
+      "age": 32,
       "email": "znfamily7@gmail.com",
       "hobby": "프로그래밍",
       "school": {
         "name": "서울대",
-        "grade": 8
+        "grade": 4
       },
       "major": "국문학",
       "minor": "물리",
@@ -186,70 +186,7 @@
       ]
     },
     {
-      "name": "지정민",
-      "gender": "male",
-      "age": 27,
-      "email": "znfamily7@gmail.com",
-      "hobby": "프로그래밍",
-      "school": {
-        "name": "서울대",
-        "grade": 4
-      },
-      "major": "국문학",
-      "minor": "물리",
-      "family": [
-        "아빠",
-        "여동생"
-      ],
       "id": 11
-    },
-    {
-      "name": "지정민",
-      "age": "27",
-      "gender": "male",
-      "email": "fdev.jm@gmail.com",
-      "hobby": "DIY 인테리어",
-      "school[name]": "가야대",
-      "school[grade]": "2",
-      "major": "설치 미술",
-      "minor": "인류학",
-      "family[]": [
-        "아빠",
-        "엄마"
-      ],
-      "id": 12
-    },
-    {
-      "name": "지정민",
-      "age": "27",
-      "gender": "male",
-      "email": "fdev.jm@gmail.com",
-      "hobby": "DIY 인테리어",
-      "school[name]": "가야대",
-      "school[grade]": "2",
-      "major": "설치 미술",
-      "minor": "인류학",
-      "family[]": [
-        "아빠",
-        "엄마"
-      ],
-      "id": 13
-    },
-    {
-      "name": "지정민",
-      "age": "27",
-      "gender": "male",
-      "email": "fdev.jm@gmail.com",
-      "hobby": "DIY 인테리어",
-      "school[name]": "가야대",
-      "school[grade]": "2",
-      "major": "설치 미술",
-      "minor": "인류학",
-      "family[]": [
-        "아빠",
-        "엄마"
-      ],
-      "id": 14
     }
   ]
 }
