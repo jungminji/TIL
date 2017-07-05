@@ -8,29 +8,19 @@
   <title>DOM 스토리지 &amp; JavaScript</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.0/css/bulma.css">
-  <link rel="stylesheet" href="css/style.css">
-  <script src="./js/native_storage.js" defer></script>
+  <script defer src="./js/native_storage.js"></script>
 </head>
 
 <body>
 
-
-  <div class="container is-fluid">
+  <div class="app container is-fluid">
     <div class="columns">
-      <div class="column is-9">
-
-      </div>
       <div class="column is-3">
         <div class="memo box">
           <label class="sr-only" for="memo-title">메모 제목</label>
           <input class="input" type="text" id="memo-title" placeholder="메모 제목">
           <label class="sr-only" for="memo-content">메모 내용</label>
-          <textarea
-            class="textarea"
-            id="memo-content"
-            cols="30"
-            rows="10"
-            placeholder="메모 내용"></textarea>
+          <textarea class="textarea" id="memo-content" cols="30" rows="10" placeholder="메모 내용"></textarea>
           <div class="field is-group">
             <button type="button" class="is-save button is-primary is-outlined is-small">
               <span class="icon is-small">
@@ -47,9 +37,13 @@
           </div>
         </div>
       </div>
+      <div class="column is-9">
+        <div class="columns is-multiline memo-item-container">
+
+        </div>
+      </div>
     </div>
   </div>
-
 
 </body>
 

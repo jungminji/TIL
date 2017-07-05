@@ -1,3 +1,11 @@
-.memo > * {
-    margin: 10px;
-}
+  .app.container {
+      margin: 1rem 2rem;
+  }
+
+  .memo>* {
+      margin-bottom: 10px;
+  }
+
+  .memo .textarea {
+      width: 100%;
+  }
